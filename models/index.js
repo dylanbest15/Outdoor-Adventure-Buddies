@@ -5,22 +5,23 @@ const path      = require('path');
 const Sequelize = require('sequelize');
 const basename  = path.basename(module.filename);
 const env       = process.env.NODE_ENV || 'development';
-const config    = require(__dirname + '/../config/config.json')[env];
+const config    = require(__dirname + '/../config/config.js')[env];
 const db        = {};
+let sequelize;
 
 if (config.use_env_constiable) {
-  const sequelize = new Sequelize(process.env[config.use_env_constiable]);
+  sequelize = new Sequelize(process.env[config.use_env_constiable]);
 } else {
-  const sequelize = new Sequelize(config.database, config.username, config.password, config);
+  sequelize = new Sequelize(config.database, config.username, config.password, config);
 }
-
+// console.log(`SEQUELIZE IS EQUAL TO THIS BAD BOY RIGHT HERE!`, sequelize);
 fs
   .readdirSync(__dirname)
   .filter(function(file) {
     return (file.indexOf('.') !== 0) && (file !== basename) && (file.slice(-3) === '.js');
   })
   .forEach(function(file) {
-    const model = sequelize['import'](path.join(__dirname, file));
+    const model = require(path.join(__dirname, file))(sequelize, Sequelize.DataTypes);
     db[model.name] = model;
   });
 

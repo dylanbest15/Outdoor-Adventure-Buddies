@@ -2,3 +2,73 @@ form.signup,
 form.login {
   margin-top: 50px;
 }
+
+
+body {
+  background-color: lightgray;
+}
+
+/* NAVIGATION */
+.logo {
+  position: fixed;
+  float: left;
+  margin: 16px 20px;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.logo a {
+    text-decoration: none;
+    color: white;
+}
+
+.logo a:visited {
+    color: lightseagreen;
+}
+
+nav {
+  position: fixed;
+  width: 100%;
+  
+}
+
+nav ul {
+  list-style: none;
+  background-color: white;
+  /* opacity: 100%; */
+  overflow: hidden;
+  color: white;
+  text-align: right;
+  margin: 0;
+  transition: 1s;
+}
+
+nav ul li {
+  display: inline-block;
+  padding: 20px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: lightseagreen;
+  font-size: 16px;
+}
+
+nav ul li a:hover {
+  color: #376167;
+  font-weight: bold;
+  font-size: 18px;
+  text-decoration: none;
+}
+
+.menu-icon {
+  width: 100%;
+  background: white;
+  text-align: right;
+  box-sizing: border-box;
+  padding: 15px 24px;
+  cursor: pointer;
+  color: lightseagreen;
+  font-size: 12px;
+  display: none;
+}

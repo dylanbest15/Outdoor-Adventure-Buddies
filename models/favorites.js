@@ -1,10 +1,12 @@
 // Creating our Favorites model
+const Sequelize = require('sequelize');
+
 module.exports = function (sequelize, DataTypes) {
   const Favorite = sequelize.define("Favorite", {
     // The email cannot be null, and must be a proper email before creation
     id: {
       type: DataTypes.UUID,
-      defaultValue: sequelize.UUIDV4,
+      defaultValue: Sequelize.UUIDV4,
       allowNull: false,
       unique: true,
       primaryKey: true

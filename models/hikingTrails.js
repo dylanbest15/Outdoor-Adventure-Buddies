@@ -23,6 +23,9 @@ module.exports = function (sequelize, DataTypes) {
         },
         trail_photo: {
             type: DataTypes.STRING
+        }, 
+        peakId: {
+            type: DataTypes.STRING
         }
         // Eventually add peak_id foreign key here
     });

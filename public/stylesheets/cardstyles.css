@@ -1,25 +1,68 @@
 /*HOME PAGE CARDS*/
-div.card-body {
-    background-color: rgba(56, 56, 151, 0.384);
-  }
+div.card {
+  background-color: rgba(56, 56, 151, 0.384);
+}
+
+/*REGIONS PAGE*/
+html, body{
+  height: 100%;
+  width: 100%;
+}
+
+div.fondo-pic {
+  background-image: linear-gradient(
+  rgba(113, 147, 209, 0.699),
+ rgba(70, 16, 94, 0.39)
+  ),
+  url("img/regionhero.jpeg")
+}
   
-  /*REGIONS PAGE*/
-  div.fondo-pic {
-    background-image: linear-gradient(
-      rgba(113, 147, 209, 0.699),
-      rgba(70, 16, 94, 0.39)
-    ),
-    url("img/regionhero.jpeg")
-  }
+body {
+  background: linear-gradient(#886a6a, #3e83a0cb);
+}
+
+h1.card-title {
+  color: beige;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+h2 {
+  color:whitesmoke;
+}
+
+.card-title {
+  color:white;
+}
+
+p.card-text {
+  color: white;
+}
   
-  h1.card-title {
-    color: beige;
-    font-family: Georgia, 'Times New Roman', Times, serif;
-  }
+p.fondo.card-text {
+  font-size: 22px;
+  color: beige;
+}
   
-  p.fondo.card-text {
-    font-size: 22px;
-    color: beige;
-  }
-  
+/*TRAILS*/
+div.trails-pic {
+  background-image: linear-gradient(
+  rgba(139, 177, 162, 0.699),
+ rgba(55, 39, 100, 0.39)
+  ),
+  url("img/pacifictrails.jpeg")
+}
+
+h1.text-center {
+  color: whitesmoke;
+}
+
+/*PEAKS*/
+div.peak-pic {
+  background-image: linear-gradient(
+  rgba(46, 94, 182, 0.699),
+ rgba(153, 148, 167, 0.39)
+  ),
+  url("img/pacifictrails.jpeg")
+}
+
   

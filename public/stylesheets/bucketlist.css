@@ -29,6 +29,10 @@ li.bucketlist-item {
   background-color: rgb(255, 255, 255, 0.7);
 }
 
+button.delete-button {
+  float: right;
+}
+
 button.find-buddies {
   margin-top: 30px;
   background-color: rgb(32, 178, 170);

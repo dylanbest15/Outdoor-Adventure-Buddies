@@ -1,0 +1,25 @@
+/*HOME PAGE CARDS*/
+div.card-body {
+    background-color: rgba(56, 56, 151, 0.384);
+  }
+  
+  /*REGIONS PAGE*/
+  div.fondo-pic {
+    background-image: linear-gradient(
+      rgba(113, 147, 209, 0.699),
+      rgba(70, 16, 94, 0.39)
+    ),
+    url("img/regionhero.jpeg")
+  }
+  
+  h1.card-title {
+    color: beige;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+  }
+  
+  p.fondo.card-text {
+    font-size: 22px;
+    color: beige;
+  }
+  
+  

@@ -72,3 +72,9 @@ nav ul li a:hover {
   font-size: 12px;
   display: none;
 }
+
+
+/*choices*/
+div.card-body {
+  background-color: rgba(56, 56, 151, 0.384);
+}

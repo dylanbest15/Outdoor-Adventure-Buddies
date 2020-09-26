@@ -7,20 +7,23 @@
     <title>Adventure Buddies</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
         integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
-    <link rel="stylesheet" href="./stylesheets/style.css">
+    <link rel="stylesheet" href="./stylesheets/cardstyles.css">
     <script src="https://code.jquery.com/jquery.js"></script>
 </head>
 
 <body>
-    <div class="container-fluid">
-        <div class="jumbotron jumbotron-fluid">
-            <div class="container">
-                <h1 class="display-4 text-center">Welcome to the trails list</h1>
-                <p class="lead text-center">Pick a trail that appeals to you and then find your adventure buddies!</p>
+    <div class="card bg-dark text-white">
+        <img src="./assets/img/pacifictrails.jpeg" height="400" class="card-img" alt="hero pic">
+        <div class="trails-pic card-img-overlay">
+            <h1 class="card-title display-1">Trails</h1>
+            <p class="fondo card-text">The world is filled with many trails. Choose a trail of your choice and then find an adventure buddy</p>
             </div>
         </div>
-
-        <h1 class="text-center">Select a trail</h1>
+        
+        <div class="container-fluid">
+        <br>
+        <h2 class="text-center">Select a trail</h2>
+        <br>
         <!--cards will populate api info-->
         <div class="card-deck">
             <div class="card">

@@ -13,13 +13,14 @@ module.exports = function (app) {
     // Function to load peak in 1 region
 
 
-    app.get("/api/generateTrails", async (req, res) => {
+    app.get("/api/generateTrails/washington", async (req, res) => {
         try {
             const trailInfo = await hikingTrailPromise(hikingLocale[0].lat, hikingLocale[0].lon, process.env.hikingTrailAPI);
             newTrailsMerge = [];
             trailInfo.data.trails.forEach((trail) => {
                 const {name: trail_name, length: mileage, ascent: elevation_gain, summary: description, imgMedium: trail_photo} = trail;
-                newTrailsMerge.push({trail_name, mileage, elevation_gain, description, trail_photo});
+                const peakId = "washington";
+                newTrailsMerge.push({trail_name, mileage, elevation_gain, description, trail_photo, peakId});
             });
             db.HikingTrail.bulkCreate(newTrailsMerge, {validate: true});
             

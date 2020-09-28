@@ -11,11 +11,15 @@ body {
 }
 
 h1 {
+  font-family: Poppins, sans-serif;
   font-size: 36px;
+  color: white;
 }
 
 h3 {
+  font-family: Poppins, sans-serif;
   font-size: 24px;
+  color: white;
 }
 
 p {

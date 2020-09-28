@@ -26,8 +26,10 @@ module.exports = function (sequelize, DataTypes) {
         }, 
         peakId: {
             type: DataTypes.STRING
+        }, 
+        regionId: {
+            type: DataTypes.STRING
         }
-        // Eventually add peak_id foreign key here
     });
     return HikingTrail;
 };

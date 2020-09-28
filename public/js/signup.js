@@ -24,11 +24,14 @@ $(document).ready(() => {
       gender: genderInput
     };
 
-    if (!userData.email || !userData.password) {
+    if (!userData.firstName && !userData.lastName && !userData.userName && !userData.email && !userData.password) {
       return;
     }
     // If we have an email and password, run the signUpUser function
-    signUpUser(userData.email, userData.password);
+    signUpUser(userData.firstName, userData.lastName, userData.userName, userData.email, userData.password);
+    firstNameInput.val("");
+    lastNameInput.val("");
+    userNameInput.val("")
     emailInput.val("");
     passwordInput.val("");
   });

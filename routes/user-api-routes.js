@@ -1,5 +1,5 @@
 const db = require("../models");
-
+const { Op } = require('sequelize');
 module.exports = function (app) {
   // This retrieves the Information of the current user.
   app.get("/api/user/:id", (req, res) => {
@@ -19,14 +19,33 @@ module.exports = function (app) {
     }).catch((err) => res.json(err));
   });
   //   This generates the bucket list of favorites for the unique user
-  app.get("/api/favorites/:id", (req, res) => {
-    db.Favorite.findAll({
-      where: {
-        userID: req.params.id
-      }
-    }).then((userFavorites) => {
-      res.json(userFavorites);
-    }).catch((err) => console.log(err));
+  app.get("/api/favorites/:id", async (req, res) => {
+    try {
+      const findFavorites = await db.Favorite.findAll({
+        where: {
+          userID: req.params.id
+        }
+      });
+      console.log(findFavorites);
+      const newTrailIDs = [];
+      findFavorites.forEach(({HikingTrailId})=> {
+        newTrailIDs.push(HikingTrailId);
+      });
+      const favoriteTrailNames = await db.HikingTrail.findAll({
+        where: {
+          id: {
+            [Op.or]: newTrailIDs
+          }
+        }
+      });
+      console.log(findFavorites, favoriteTrailNames);
+      const data = {userFavorites: findFavorites, favoritesTrailNames: favoriteTrailNames};
+      res.json(data);
+    } catch(err) {
+      console.log(err);
+      
+    }
+    
   });
 
 

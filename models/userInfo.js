@@ -48,10 +48,6 @@ module.exports = function(sequelize, DataTypes) {
     gender: {
       type: DataTypes.STRING,
       allowNull: true
-    },
-    profile_picture: {
-      type: DataTypes.STRING,
-      allowNull: true
     }
   });
   User.associate = function(models) {

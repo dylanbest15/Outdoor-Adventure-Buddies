@@ -3,11 +3,13 @@ const db = require("../models");
 module.exports = function (app) {
   // This retrieves the Information of the current user.
   app.get("/api/user/:id", (req, res) => {
+    console.log('REQ.USER \n================\n', req.user);
     db.User.findOne({
       where: {
         id: req.params.id
       }
     }).then((UserId) => {
+      // save stuff localStorage
         res.json(UserId);
       }).catch((err) => console.log(err));
   });

@@ -26,4 +26,24 @@ module.exports = function(app) {
   app.get("/members", isAuthenticated, (req, res) => {
     res.sendFile(path.join(__dirname, "../public/members.html"));
   });
+
+  app.get("/bucketlist", isAuthenticated, (req, res) => {
+    res.sendFile(path.join(__dirname, "../public/bucketlist.html"));
+  });
+
+  app.get("/card", isAuthenticated, (req, res) => {
+    res.sendFile(path.join(__dirname, "../public/card.html"));
+  });
+
+  app.get("/peaks", isAuthenticated, (req, res) => {
+    res.sendFile(path.join(__dirname, "../public/peaks.html"));
+  });
+
+  app.get("/regions", isAuthenticated, (req, res) => {
+    res.sendFile(path.join(__dirname, "../public/regions.html"));
+  });
+
+  app.get("/trails", isAuthenticated, (req, res) => {
+    res.sendFile(path.join(__dirname, "../public/trails.html"));
+  });
 };

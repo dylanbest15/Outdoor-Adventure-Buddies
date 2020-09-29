@@ -14,7 +14,7 @@
   <!-- font awesome cdn -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
-        integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous" />
+    integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous" />
 </head>
 
 <body class="bucketlist-body">
@@ -64,17 +64,19 @@
 
     <div class="container bucketlist">
       <form class="bucketlist-form">
+        <h2>Show me adventure buddies for...</h2>
         <ul class="list-group">
-          <!-- <template id="list-template"> -->
-          <li class="list-group-item bucketlist-item">
-            <div class="form-check">
-              <input type="checkbox" class="form-check-input">
-              <label class="form-check-label" for="exampleCheck1">Example Text</label>
-              <button type="button" class="btn btn-danger btn-sm delete-button">
-                <i class="fa fa-trash" aria-hidden="true"></i></button>
-            </div>
-          </li>
-          <!-- </template> -->
+          <template id="list-template">
+            <li class="list-group-item bucketlist-item">
+              <div class="form-check">
+                <input type="checkbox" class="form-check-input">
+                <label class="form-check-label" for="exampleCheck1"></label>
+                <span class="trail-text">Example Text</span>
+                <button type="button" class="btn btn-danger btn-sm delete-button">
+                  <i class="fa fa-trash" aria-hidden="true"></i></button>
+              </div>
+            </li>
+          </template>
         </ul>
         <div class="center">
           <button type="submit" class="btn btn-light btn-outline-light btn-lg find-buddies">

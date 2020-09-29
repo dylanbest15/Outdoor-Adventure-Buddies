@@ -25,12 +25,31 @@ div.jumbotron p {
   align-items: center;
 }
 
+h2 {
+  color: white;
+}
+
 li.bucketlist-item {
   background-color: rgb(255, 255, 255, 0.7);
+  font-weight: bold;
+  font-size: 20px;
+}
+
+input.form-check-input {
+  width: 30px;
+  height: 30px;
+  position: relative;
+}
+
+span.trail-text {
+  position: relative;
+  bottom: 8px;
 }
 
 button.delete-button {
   float: right;
+  position: relative;
+  top: 6px;
 }
 
 button.find-buddies {

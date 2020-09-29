@@ -5,37 +5,102 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Outdoor Adventure Buddies Bucket List</title>
-  <!-- link to stylesheet -->
+  <!-- link to stylesheets -->
   <link rel="stylesheet" href="./stylesheets/style.css">
+  <link rel="stylesheet" href="./stylesheets/bucketlist.css">
   <!-- boostrap cdn -->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
     integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+  <!-- font awesome cdn -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+        integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous" />
 </head>
 
-<body>
+<body class="bucketlist-body">
 
-  <div class="container">
-    <div class="jumbotron jumbotron-fluid">
-      <div class="container">
-        <h1 class="display-4 text-center">Your Bucket List</h1>
-        <p class="lead text-center">Life is short. What adventure will you tick off next?</p>
+  <header>
+    <nav class="navbar fixed-top navbar-expand-lg navbar-light navbg bg-light">
+      <a class="navbar-brand" href="./index.html">Outdoor Adventure Buddies</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" href="#account">Account</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#bucketlist">Bucket List</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#hiking">Hiking</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#climbing">Climbing</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#travel">Travel</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#contact">Contact Us</a>
+          </li>
+        </ul>
       </div>
+    </nav>
+  </header>
+
+  <br>
+  <br>
+
+  <main class="bucketlist-main">
+
+
+    <div class="jumbotron jumbotron-fluid bucketlist-jumbotron">
+      <h1 class="display-4 text-center">Your Bucket List</h1>
+      <p class="lead text-center">Life is short. What adventure will you tick off next?</p>
     </div>
 
-    <form>
-      <ul class="list-group">
-        <!-- <template class="template"> -->
-          <li class="list-group-item">
+    <div class="container bucketlist">
+      <form class="bucketlist-form">
+        <ul class="list-group">
+          <!-- <template id="list-template"> -->
+          <li class="list-group-item bucketlist-item">
             <div class="form-check">
-              <input type="checkbox" class="form-check-input" id="exampleCheck1">
+              <input type="checkbox" class="form-check-input">
               <label class="form-check-label" for="exampleCheck1">Example Text</label>
-            </div>  
+              <button type="button" class="btn btn-danger btn-sm delete-button">
+                <i class="fa fa-trash" aria-hidden="true"></i></button>
+            </div>
           </li>
-        <!-- </template> -->
-      </ul>
-      <button type="submit" class="btn btn-primary btn-lg">Find Adventure Buddies!</button>
-    </form>
-  </div>
+          <!-- </template> -->
+        </ul>
+        <div class="center">
+          <button type="submit" class="btn btn-light btn-outline-light btn-lg find-buddies">
+            <i class="fa fa-hand-pointer-o" aria-hidden="true"></i>
+            Find Adventure Buddies!</button>
+        </div>
+      </form>
+    </div>
+
+  </main>
+
+  <footer>
+    <div>Outdoor Adventure Buddies © 2020</div>
+    <br />
+    <div class="social">
+      <a href="https://www.facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a>
+      <a href="https://www.instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+      <a href="#"><i class="far fa-envelope"></i></a>
+      <a href="#"><i class="fas fa-mobile-alt"></i></a>
+    </div>
+  </footer>
+
+  <!-- jquery cdn -->
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+  <!-- link to javascript -->
+  <script src="./js/bucketlist.js"></script>
 
 </body>
 

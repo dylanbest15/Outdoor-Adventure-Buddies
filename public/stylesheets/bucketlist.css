@@ -1,0 +1,41 @@
+/* bucketlist */
+main.bucketlist-main {
+  height: 100vh;
+  background-image: url("../assets/img/bucketlist.jpg");
+  background-size: 100%;
+}
+
+div.bucketlist-jumbotron {
+  background: none;
+}
+
+div.jumbotron h1 {
+  font-weight: bold;
+  color: white
+}
+
+div.jumbotron p {
+  font-weight: bold;
+  color: white;
+}
+
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+li.bucketlist-item {
+  background-color: rgb(255, 255, 255, 0.7);
+}
+
+button.delete-button {
+  float: right;
+}
+
+button.find-buddies {
+  margin-top: 30px;
+  background-color: rgb(32, 178, 170);
+  border: 1px solid rgb(32, 178, 170);
+  font-weight: bold;
+}

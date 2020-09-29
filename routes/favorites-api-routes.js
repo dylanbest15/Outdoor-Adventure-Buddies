@@ -38,4 +38,15 @@ module.exports = function (app) {
             res.json(newFavorite);
         }).catch((err) => res.json(err));
     });
+
+    // Delete a favorite
+    app.delete("/api/favorites/:id", (req, res) => {
+        db.Favorite.destroy({
+            where: {
+                id: req.params.id
+            }
+        }).then((deletedItem) => {
+            res.json(deletedItem);
+        }).catch((err) => res.json(err));
+    });
 };

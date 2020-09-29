@@ -1,80 +1,129 @@
-form.signup,
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+/* form.signup,
 form.login {
   margin-top: 50px;
-}
+} */
 
 
 body {
   background-color: lightgray;
 }
 
-/* NAVIGATION */
-.logo {
-  position: fixed;
-  float: left;
-  margin: 16px 20px;
-  font-weight: bold;
-  font-size: 20px;
+h1 {
+  font-family: Poppins, sans-serif;
+  font-size: 36px;
+  color: white;
 }
 
-.logo a {
-    text-decoration: none;
-    color: white;
+h3 {
+  font-family: Poppins, sans-serif;
+  font-size: 24px;
+  color: white;
 }
 
-.logo a:visited {
-    color: lightseagreen;
+p {
+  font-family: Poppins, sans-serif;
 }
 
-nav {
-  position: fixed;
+.jumbotron {
   width: 100%;
   
 }
 
-nav ul {
-  list-style: none;
-  background-color: white;
-  /* opacity: 100%; */
-  overflow: hidden;
+.hero {
+  height: 100vh;
+  background-image: url("https://images.pexels.com/photos/697243/pexels-photo-697243.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+}
+
+.hero-jumbotron {
+  background: none;
+}
+
+
+/* NAVIGATION */
+nav.navbar {
+  font-family: Poppins, sans-serif;
+  /* background-color: #fff!important; */
+}
+
+/* #container {
+  position: relative;
+  text-align: center;
+} */
+
+
+.btn {
+  border-radius: 20px;
+  padding: 5px 40px;
+  font-size: 20px;
+}
+
+.btn a {
+  text-decoration: none;
   color: white;
-  text-align: right;
-  margin: 0;
-  transition: 1s;
 }
 
-nav ul li {
-  display: inline-block;
-  padding: 20px;
-}
-
-nav ul li a {
-  text-decoration: none;
-  color: lightseagreen;
-  font-size: 16px;
-}
-
-nav ul li a:hover {
-  color: #376167;
-  font-weight: bold;
-  font-size: 18px;
-  text-decoration: none;
-}
-
-.menu-icon {
-  width: 100%;
-  background: white;
-  text-align: right;
-  box-sizing: border-box;
-  padding: 15px 24px;
-  cursor: pointer;
-  color: lightseagreen;
-  font-size: 12px;
-  display: none;
+.centered {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 
 /*choices*/
 div.card-body {
   background-color: rgba(56, 56, 151, 0.384);
+}
+
+
+/* FOOTER */
+footer {
+  background: #666;
+  color: #fff;
+  text-align: center;
+  padding: 50px;
+  font-family: Poppins, sans-serif;
+}
+
+.social {
+  font-size: 24px;
+  color: white; 
+  text-decoration: none;
+  
+}
+
+.social a {
+  color: white;
+  text-decoration: none;
+  padding: 20px;
+}
+
+.social a:hover {
+  color: lightseagreen;
+}
+
+
+@media (max-width: 576px) {
+  .hero {
+    background-image: url("https://images.pexels.com/photos/697243/pexels-photo-697243.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
+    /* background-size: 100%; */
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+
+  }
+
+  .centered {
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 50px;
+  }
 }

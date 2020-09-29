@@ -30,12 +30,9 @@ require("./routes/html-routes.js")(app);
 require("./routes/api-routes.js")(app);
 require("./routes/user-api-routes")(app);
 require("./routes/favorites-api-routes")(app);
-<<<<<<< HEAD
 require("./routes/email-routes.js")(app);
-=======
 require("./routes/api-load-database")(app);
 require("./routes/api-hiking-trail")(app);
->>>>>>> 92f1423397121388358dfa863616954c5073a473
 
 // Syncing our database and logging a message to the user upon success
 db.sequelize.sync().then(() => {

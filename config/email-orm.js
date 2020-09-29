@@ -6,6 +6,7 @@ sgMail.setApiKey(process.env.SendGridAPI);
 
 //ES6
 sendEmail = (to, from, subject, text, html) => {
+  console.log("sendemail fx start")
   const msg = {
     to,
     from,
@@ -27,6 +28,7 @@ sendEmail = (to, from, subject, text, html) => {
   (async () => {
     try {
       await sgMail.send(msg);
+      console.log("sendemail fx done");
     } catch (error) {
       console.error(error);
 
@@ -36,5 +38,9 @@ sendEmail = (to, from, subject, text, html) => {
     }
   })();
 }
+
+
+
+
 
 module.exports = sendEmail;

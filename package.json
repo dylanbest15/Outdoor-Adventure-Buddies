@@ -21,11 +21,8 @@
   },
   "homepage": "https://github.com/dylanbest15/Outdoor-Adventure-Buddies#readme",
   "dependencies": {
-<<<<<<< HEAD
     "@sendgrid/mail": "^7.2.6",
-=======
     "axios": "^0.20.0",
->>>>>>> 92f1423397121388358dfa863616954c5073a473
     "bcryptjs": "2.4.3",
     "dotenv": "^8.2.0",
     "express": "^4.17.1",

@@ -27,7 +27,7 @@ $(document).ready(() => {
     if (!userData.firstName && !userData.lastName && !userData.userName && !userData.email && !userData.password) {
       return;
     }
-    // If we have an email and password, run the signUpUser function
+    // If we have a firstname, lastname, username, email and password, run the signUpUser function
     signUpUser(userData.firstName, userData.lastName, userData.userName, userData.email, userData.password);
     firstNameInput.val("");
     lastNameInput.val("");

@@ -5,11 +5,11 @@ module.exports = function (app) {
         console.log("setting up email template");
 
         //(to, from, subject, text, html) 
-        sendEmail.userToUser(req.body.to, req.body.emailInfo);
+        sendEmail.userToUser(req.body.userTo, req.body);
 
         console.log(`\n\nreq.body === ${req.body}\n\n`);
 
-        sendEmail.adminToUser(req.body.from, req.body.message);
+        sendEmail.adminToUser(req.body.userFrom, req.body);
 
         // .then(function(data){
         //     console.log("success and done")

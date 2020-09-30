@@ -47,15 +47,14 @@ userToUser = (to, userData) => {
   sendEmail(msg);
 }
 
-adminToUser = (to, html) => {
+adminToUser = (to, userData) => {
   console.log("Send an email: admin-to-user function has started");
 
   const msg = {
     to,
     from: process.env.SendGridAdminEmail,
-    // template_id: ,
-    subject: "You Contacted An Adventurer!",
-    html,
+    dynamic_template_data: userData,
+    template_id: "d-d6c995a75180408e9d39e14eb74c6b96"
   };
 
   sendEmail(msg);

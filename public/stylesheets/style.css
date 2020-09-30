@@ -8,12 +8,19 @@ form.login {
 
 body {
   background-color: lightgray;
+  font-family: Poppins, sans-serif;
 }
 
 h1 {
   font-family: Poppins, sans-serif;
   font-size: 36px;
   color: white;
+}
+
+h2 {
+  font-family: Poppins, sans-serif;
+  font-size: 36px;
+  text-align: center;
 }
 
 h3 {
@@ -34,6 +41,15 @@ p {
 .hero {
   height: 100vh;
   background-image: url("https://images.pexels.com/photos/697243/pexels-photo-697243.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+}
+
+.hero-login {
+  height: 100vh;
+  background-image: url("https://images.pexels.com/photos/459225/pexels-photo-459225.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -85,6 +101,35 @@ p.invalid-input {
   display: none;
   color: #ff0000;
 }
+
+
+/* LOGIN PAGE */
+
+.col-sm-6 {
+  background-color: steelblue;
+  color: white;
+  padding: 50px;
+  border-radius: 25px;
+  margin-top: 100px;
+  opacity: 90%;
+}
+
+.login input {
+  border-radius: 20px;
+}
+
+.btn.btn-primary.login {
+  background-color: white;
+  color: steelblue;
+}
+
+.btn.btn-primary.login:hover{
+  background-color: gray;
+  color: white;
+}
+
+
+
 
 /* FOOTER */
 footer {

@@ -1,7 +1,7 @@
 /* bucketlist */
 main.bucketlist-main {
-  height: 100vh;
   background-image: url("../assets/img/bucketlist.jpg");
+  height: 140vh;
   background-size: 100%;
 }
 
@@ -27,12 +27,15 @@ div.jumbotron p {
 
 h2 {
   color: white;
+  position: relative;
+  bottom: 0px;
 }
 
 li.bucketlist-item {
   background-color: rgb(255, 255, 255, 0.7);
   font-weight: bold;
   font-size: 20px;
+  border: 1px solid black;
 }
 
 input.form-check-input {
@@ -92,6 +95,8 @@ span.span-close {
 
 button.close {
   float: left;
+  margin-bottom: 20px;
+  color: red;
 }
 
 button.close:hover,
@@ -99,4 +104,21 @@ button.close:focus {
   color: #000;
   text-decoration: none;
   cursor: pointer;
+}
+
+li.buddylist-item {
+  background-color: rgb(255, 255, 255, 0.7);
+  font-weight: bold;
+  font-size: 20px;
+  border: 1px solid black;
+}
+
+span.buddy-name {
+  position: relative;
+  top: 2px;
+}
+
+button.email-buddy {
+  float: right;
+  position: relative;
 }

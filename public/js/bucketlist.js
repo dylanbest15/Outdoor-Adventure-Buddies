@@ -2,9 +2,11 @@
 $(function () {
 
   // bucketlist and buddy modal variables
-  const bucketlist = $("ul.list-group");
+  const bucketlist = $("ul.trail-list");
   const listItem = $($("#list-template").html());
   const buddyModal = document.getElementById("buddy-modal");
+  const buddyList = $("ul.buddy-list");
+  const buddyItem = $($("#buddy-template").html());
 
   // set current trail ID for search
   let currentTrailId;
@@ -40,6 +42,7 @@ $(function () {
   // checkbox change event
   $(document).on("change", "input.form-check-input", function (event) {
     currentTrailId = $(this).attr("id");
+    console.log(currentTrailId);
     // uncheck all other checkboxes
     $("input.form-check-input").not(this).prop("checked", false);
   })
@@ -69,7 +72,13 @@ $(function () {
 
       // show buddy modal
       buddyModal.style.display = "block";
-      // ***** need to append buddy info to modal
+      // create email list item for each buddy found
+      for (let i = 0; i < result.length; i++) {
+        let newBuddyItem = buddyItem.clone();
+        newBuddyItem.find("span.buddy-name").text(`${result[i].first_name} ${result[i].last_name}`);
+        newBuddyItem.find("button.email-buddy").attr("id", result[i].email);
+        buddyList.append(newBuddyItem);
+      }
     })
   })
 
@@ -84,4 +93,12 @@ $(function () {
       buddyModal.style.display = "none";
     }
   }
+
+  // email button click event
+  $(document).on("click", "button.email-buddy", function (event) {
+    let emailAddress = $(this).attr("id");
+    console.log(emailAddress);
+
+    // ***** need to work with back end to set up email event
+  })
 })

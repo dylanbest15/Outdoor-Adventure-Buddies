@@ -67,7 +67,7 @@
     <div class="container bucketlist">
       <form class="bucketlist-form">
         <h2>Show me adventure buddies for...</h2>
-        <ul class="list-group">
+        <ul class="list-group trail-list">
           <template id="list-template">
             <li class="list-group-item bucketlist-item">
               <div class="form-check">
@@ -91,7 +91,15 @@
       <div id=buddy-modal class="modal">
         <div class="modal-content">
           <span class="span-close"><button class="close">&times;</button></span>
-          <p>example text</p>
+          <ul class="list-group buddy-list">
+            <template id="buddy-template">
+            <li class="list-group-item buddylist-item">
+              <span class="buddy-name"></span>
+              <button class="btn btn-primary email-buddy">
+                <i class="fa fa-envelope"></i></button>
+            </li>
+            </template>
+          </ul>
         </div>
       </div>
     </div>
@@ -103,34 +111,34 @@
     <div>Outdoor Adventure Buddies © 2020</div>
     <br />
     <div class="social">
-        <a href="https://www.facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a>
-        <a href="https://www.instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
-        <a href="#"><i class="far fa-envelope"></i></a>
-        <a href="#"><i class="fas fa-mobile-alt"></i></a>
+      <a href="https://www.facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a>
+      <a href="https://www.instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+      <a href="#"><i class="far fa-envelope"></i></a>
+      <a href="#"><i class="fas fa-mobile-alt"></i></a>
     </div>
 
     <div>
-        <a class="white border-right" target="_blank" href="https://github.com/ARam2142">Dylan Best&ThickSpace;
-        </a>
-        <a class="white border-right" target="_blank" href="https://github.com/johnstoc13">&ThickSpace; Chad
-            Laflamme
-            &ThickSpace;
-        </a>
-        <a class="white border-right" target="_blank" href="https://github.com/mwoodervin">&ThickSpace; Brendan
-            Leighton
-            &ThickSpace;
-        </a>
-        <a class="white border-right" target="_blank" href="https://github.com/tbourgoin630">&ThickSpace; Andres
-            Ramirez
-            &ThickSpace;
-        </a>
-        <a class="white border-right" target="_blank" href="https://github.com/mwoodervin">&ThickSpace; Kayla Dunphe
-            &ThickSpace;
-        </a>
-        <a class="white" target="_blank" href="https://github.com/tbourgoin630">&ThickSpace; Alex Bertrand</a>
+      <a class="white border-right" target="_blank" href="https://github.com/ARam2142">Dylan Best&ThickSpace;
+      </a>
+      <a class="white border-right" target="_blank" href="https://github.com/johnstoc13">&ThickSpace; Chad
+        Laflamme
+        &ThickSpace;
+      </a>
+      <a class="white border-right" target="_blank" href="https://github.com/mwoodervin">&ThickSpace; Brendan
+        Leighton
+        &ThickSpace;
+      </a>
+      <a class="white border-right" target="_blank" href="https://github.com/tbourgoin630">&ThickSpace; Andres
+        Ramirez
+        &ThickSpace;
+      </a>
+      <a class="white border-right" target="_blank" href="https://github.com/mwoodervin">&ThickSpace; Kayla Dunphe
+        &ThickSpace;
+      </a>
+      <a class="white" target="_blank" href="https://github.com/tbourgoin630">&ThickSpace; Alex Bertrand</a>
     </div>
-</footer>
-<!-- Footer -->
+  </footer>
+  <!-- Footer -->
 
   <!-- jquery cdn -->
   <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>

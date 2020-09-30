@@ -41,7 +41,12 @@ module.exports = function (app) {
 
     // add new favorite
     app.post("/api/favorites", (req, res) => {
-        db.Favorite.create(req.body).then((newFavorite) => {
+        const trailId = req.body.trailId;
+        
+        db.Favorite.create({
+           UserId: req.user.id,
+           HikingTrailId: trailId
+        }).then((newFavorite) => {
             res.json(newFavorite);
         }).catch((err) => res.json(err));
     });

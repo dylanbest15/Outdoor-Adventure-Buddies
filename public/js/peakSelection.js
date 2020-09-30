@@ -26,7 +26,8 @@ $(document).ready(() => {
     })
     $(document).on('click', "button.trailButton", (event) => {
         event.preventDefault();
-        console.log($(event.target).attr("data-trailId"));
+        const trailId = $(event.target).attr("data-trailId");
+        $.post(`api/favorites`, {trailId: trailId});
     })
 
 });

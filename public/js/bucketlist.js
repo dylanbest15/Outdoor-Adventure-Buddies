@@ -8,25 +8,24 @@ $(function () {
   const buddyList = $("ul.buddy-list");
   const buddyItem = $($("#buddy-template").html());
 
-  // set current trail ID for search
+  // set global variables for apis
   let currentTrailId;
   let userID;
+  let emailAddress;
+  let recipientName;
 
   // get user id ajax request
   $.ajax("/api/user_data", {
     method: "GET"
   }).then(function (userData) {
-    console.log(userData);
 
     // set userID variable
     userID = userData.id;
-    console.log("userID ===", userID);
 
     // get user favorites ajax request
     $.ajax(`/api/favorites/${userID}`, {
       method: "GET"
     }).then(function ({ userFavorites, favoritesTrailNames } = result) {
-      console.log(`userFavorites === ${userFavorites}, \nfavoriteTrailNames ===${favoritesTrailNames}`);
 
       // create bucketlist item for each favorited trail
       for (let i = 0; i < favoritesTrailNames.length; i++) {
@@ -42,7 +41,6 @@ $(function () {
   // checkbox change event
   $(document).on("change", "input.form-check-input", function (event) {
     currentTrailId = $(this).attr("id");
-    console.log(`currentTrailId === `, currentTrailId);
     // uncheck all other checkboxes
     $("input.form-check-input").not(this).prop("checked", false);
   })
@@ -54,7 +52,6 @@ $(function () {
     $.ajax(`/api/favorites/${id}`, {
       type: "DELETE"
     }).then(function () {
-      console.log("Deleted item from bucketlist!");
       location.reload();
     })
   })
@@ -67,17 +64,19 @@ $(function () {
       method: "GET",
       data: userID
     }).then(function (result) {
-      console.log(`$.get buddyList result === `, result);
-      console.log(`$.get buddyList userID === `, userID);
 
-      // show buddy modal
-      buddyModal.style.display = "block";
-      // create email list item for each buddy found
-      for (let i = 0; i < result.length; i++) {
-        let newBuddyItem = buddyItem.clone();
-        newBuddyItem.find("span.buddy-name").text(`${result[i].first_name} ${result[i].last_name}`);
-        newBuddyItem.find("button.email-buddy").attr("id", result[i].email);
-        buddyList.append(newBuddyItem);
+      if (currentTrailId) {
+        // clear list and show buddy modal
+        buddyList.empty();
+        buddyModal.style.display = "block";
+        // create email list item for each buddy found
+        for (let i = 0; i < result.length; i++) {
+          let newBuddyItem = buddyItem.clone();
+          newBuddyItem.find("span.buddy-name").text(`${result[i].first_name} ${result[i].last_name}`);
+          newBuddyItem.find("button.email-buddy").attr("id", result[i].email);
+          newBuddyItem.find("button.email-buddy").attr("data-recipient", `${result[i].first_name} ${result[i].last_name}`);
+          buddyList.append(newBuddyItem);
+        }
       }
     })
   })
@@ -99,15 +98,16 @@ $(function () {
 
     event.preventDefault();
 
-    let emailAddress = $(this).attr("id");
-    console.log(`buddy.email-buddy BTN.click emailAddress === `, emailAddress);
+    // recipients email and name for email template
+    emailAddress = $(this).attr("id");
+    recipientName = $(this).attr("data-recipient");
 
     async function getSenderUserEmail() {
       await $.get("/api/user_data", function ({ email }) {
         console.log(email);
         return emailData = {
-            userTo: emailAddress,
-            userFrom: email
+          userTo: emailAddress,
+          userFrom: email
         };
       }).then(() => {
         if (!emailData.userTo || !emailData.userFrom) {

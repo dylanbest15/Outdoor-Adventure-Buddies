@@ -2,10 +2,10 @@ const sendEmail = require("../config/email-orm");
 
 module.exports = function (app) {
     app.post("/email/send-email", (req, res) => {
-        console.log("setting up email template")
+        console.log("setting up email template");
 
         //(to, from, subject, text, html) 
-        sendEmail(req.body.to, req.body.from, req.body.subject,req.body.text, req.body.html)
+        sendEmail(req.body.to, req.body.from, req.body.subject, req.body.html)
         // .then(function(data){
         //     console.log("success and done")
         // })

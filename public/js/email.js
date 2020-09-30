@@ -6,10 +6,9 @@ $(document).ready(() => {
         event.preventDefault();
         const emailData = {
             html: textInput.val().trim(),
-            text: "this is text",
-            subject:"this is the subject",
+            subject: "this is the subject",
             to: $("#sender-message").val().trim(),
-            from:"outdoor.adventure.buddies@gmail.com"
+            from: getSenderUserEmail()
         };
 
         if (!emailData.html) {
@@ -26,14 +25,17 @@ $(document).ready(() => {
     function sendEmail(emailData) {
         $.post("/email/send-email", emailData)
             .then(() => {
-                window.location.replace("/members");
+                window.location.replace("/bucketlist.html");
                 // If there's an error, handle it by throwing up a bootstrap alert
             })
-            .catch(handleLoginErr);
+            .catch(err, function() {
+                console.log(err);
+            });
     }
 
-    function handleLoginErr(err) {
-        $("#alert .msg").text(err.responseJSON);
-        $("#alert").fadeIn(500);
+    function getSenderUserEmail() {
+        $.get("/api/user_data", function(userData) {
+            return userData.email;
+        })
     }
 });

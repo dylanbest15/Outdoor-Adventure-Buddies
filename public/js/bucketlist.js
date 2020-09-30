@@ -8,6 +8,7 @@ $(function () {
 
   // set current trail ID for search
   let currentTrailId;
+  let userID;
 
   // get user id ajax request
   $.ajax("/api/user_data", {
@@ -16,7 +17,7 @@ $(function () {
     console.log(userData);
 
     // set userID variable
-    const userID = userData.id;
+    userID = userData.id;
     console.log(userID);
 
     // get user favorites ajax request
@@ -60,9 +61,11 @@ $(function () {
     event.preventDefault();
     // find buddies ajax request
     $.ajax(`/api/buddyList/${currentTrailId}`, {
-      method: "GET"
+      method: "GET",
+      data: userID
     }).then(function (result) {
       console.log(result);
+      console.log(userID);
 
       // show buddy modal
       buddyModal.style.display = "block";

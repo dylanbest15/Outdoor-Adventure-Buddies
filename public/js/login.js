@@ -13,8 +13,6 @@ $(document).ready(() => {
     };
 
     if (!userData.email || !userData.password) {
-      userData.email.setCustomValidity("Try again");
-      userData.password.setCustomValidity("Please retry your password");
       return;
     }
 

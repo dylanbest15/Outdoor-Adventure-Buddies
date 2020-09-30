@@ -1,9 +1,10 @@
 // document ready
 $(function () {
 
-  // grab element variables
+  // bucketlist and buddy modal variables
   const bucketlist = $("ul.list-group");
-  const listItem = $("#list-template");
+  const listItem = $($("#list-template").html());
+  const buddyModal = document.getElementById("buddy-modal");
 
   // set current trail ID for search
   let currentTrailId;
@@ -16,45 +17,38 @@ $(function () {
 
     // set userID variable
     const userID = userData.id;
+    console.log(userID);
 
     // get user favorites ajax request
     $.ajax(`/api/favorites/${userID}`, {
       method: "GET"
-    }).then(function (result) {
-      console.log(result);
+    }).then(function ({ userFavorites, favoritesTrailNames } = result) {
+      console.log(userFavorites, favoritesTrailNames);
 
-      // if user has no favorites
-      if (!result) {
-        // ***** create modal pop up with link to get started
-      } else {
-        // create bucketlist item for each favorited trail
-        for(let i = 0; i < result.userFavorites.length(); i++) {
-          let newListItem = listItem.clone();
-          // ***** need to modify variable based on what's returned in result
-          newListItem.find("span.trail-text").text(result.favoritesTrailNames[i].trail_name);
-          newListItem.find("input.form-check-input").attr("id", result.userFavorites[i].HikingTrailId);
-          newListItem.find("button.delete-button").attr("id", result.userFavorites[i].id);
-          bucketlist.append(newListItem);
-        };
-      }
+      // create bucketlist item for each favorited trail
+      for (let i = 0; i < favoritesTrailNames.length; i++) {
+        let newListItem = listItem.clone();
+        newListItem.find("span.trail-text").text(favoritesTrailNames[i].trail_name);
+        newListItem.find("input.form-check-input").attr("id", userFavorites[i].HikingTrailId);
+        newListItem.find("button.delete-button").attr("id", userFavorites[i].id);
+        bucketlist.append(newListItem);
+      };
     })
   })
 
   // checkbox change event
-  $("input.form-check-input").on("change", function (event) {
-    event.preventDefault();
-    currentTrailId = $(this).data("id");
+  $(document).on("change", "input.form-check-input", function (event) {
+    currentTrailId = $(this).attr("id");
     // uncheck all other checkboxes
-    // ***** will this work (grabbing specific id attribute using hashtag and this.data) ??
-    $(`#${$(this).data("id")}`).not(this).prop("checked", false);
+    $("input.form-check-input").not(this).prop("checked", false);
   })
 
   // delete favorite click event
-  $("button.delete-button").on("click", function (event) {
+  $(document).on("click", "button.delete-button", function (event) {
+    let id = $(this).attr("id");
     // delete favorites ajax request
-    // ***** will this work ??
-    $.ajax(`/api/favorites/:${$(this).data("id")}`, {
-      method: "DELETE"
+    $.ajax(`/api/favorites/${id}`, {
+      type: "DELETE"
     }).then(function () {
       console.log("Deleted item from bucketlist!");
       location.reload();
@@ -63,14 +57,28 @@ $(function () {
 
   // find adventure buddies click event
   $("button.find-buddies").on("click", function (event) {
+    event.preventDefault();
     // find buddies ajax request
     $.ajax(`/api/buddyList/${currentTrailId}`, {
       method: "GET"
     }).then(function (result) {
       console.log(result);
 
-      // ***** function doesn't exist yet. do we want to display buddies in modal ??
-      displayBuddies(result);
+      // show buddy modal
+      buddyModal.style.display = "block";
+      // ***** need to append buddy info to modal
     })
   })
+
+  // close modal click event
+  $("button.close").on("click", function (event) {
+    buddyModal.style.display = "none";
+  })
+
+  // window click event for modal
+  window.onclick = function(event) {
+    if (event.target == buddyModal) {
+      buddyModal.style.display = "none";
+    }
+  }
 })

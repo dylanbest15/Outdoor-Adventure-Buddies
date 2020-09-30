@@ -131,6 +131,4 @@ $(function () {
     getSenderUserEmail();
 
   })
-
-  // ***** need to work with back end to set up email event
 })

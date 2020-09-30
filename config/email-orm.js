@@ -31,9 +31,6 @@ createDynamicTemplateData = (userData) => {
 userToUser = (to, userData) => {
 
   console.log("Send an email: user-to-user function has started");
-  
-  // const templateData = createDynamicTemplateData(userData);
-  // console.log(`\n\n***\n\nthis is the templateData JSON, `, templateData);
 
   const msg = {
     to,
@@ -54,7 +51,8 @@ adminToUser = (to, userData) => {
     to,
     from: process.env.SendGridAdminEmail,
     dynamic_template_data: userData,
-    template_id: "d-d6c995a75180408e9d39e14eb74c6b96"
+    template_id: "d-d6c995a75180408e9d39e14eb74c6b96",
+    // html: handlebars.render()
   };
 
   sendEmail(msg);

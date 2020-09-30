@@ -2,20 +2,18 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Adventure Buddies</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
-        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
-    <link rel="stylesheet" href="./stylesheets/cardstyles.css">
-    <link rel="stylesheet" href="./stylesheets/style.css" type="text/css" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous" />
+    <link rel="stylesheet" href="./stylesheets/cardstyles.css" />
+    <link rel="stylesheet" href="./stylesheets/style.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
         integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous" />
     <script src="https://code.jquery.com/jquery.js"></script>
 </head>
 
 <body>
-
     <!-- Navigation Menu -->
     <header>
         <nav class="navbar fixed-top navbar-expand-lg navbar-light navbg bg-light">
@@ -49,56 +47,56 @@
         </nav>
     </header>
     <!-- Navigation Menu -->
+
     <main class="mt-4">
+        
         <div class="card bg-dark text-white">
-            <img src="./assets/img/regionhero.jpeg" height="350" class="card-img" alt="hero pic">
-            <div class="fondo-pic card-img-overlay">
-                <h1 class="card-title display-1">Adventures</h1>
-                <p class="fondo card-text">The world is huge! There a countless places to go to with your adventure
-                    buddy.
-                    Scroll
-                    down to learn more</p>
+            <img src="./assets/img/snowpeak.jpeg" height="350" class="card-img" alt="hero pic" />
+            <div class="peak-pic card-img-overlay">
+                <h1 class="card-title display-1">Peaks</h1>
+                <p class="fondo card-text">
+                    The world is huge! There a countless places to go to with your
+                    adventure buddy. Scroll down to learn more
+                </p>
             </div>
         </div>
         <div class="container-fluid">
-            <br>
-            <h2 class="text-center">Select a region</h2>
-            <br>
-            
+            <br />
+            <h2 class="text-center">Select a peak</h2>
+            <br />
+            <!--cards will populate api info-->
             <div class="card-deck">
                 <div class="card">
-                    <img src="./assets/img/dacks.jpg" class="card-img-top img-fluid" alt="...">
+                    <img src="./assets/img/giantMtn.jpg" class="card-img-top img-fluid" alt="..." />
                     <div class="card-body">
-                        <h5 class="card-title">Adirondacks</h5>
-                        <p class="card-text">Home to some of the most wild and remote terrain on the East Coast, the Adirondacks will leave your legs and heart pumping.</p>
+                        <h5 class="card-title">Giant Mtn</h5>
+                        <p class="card-text">
+                            A peak with beautiful scrambles and even nicer views.
+                        </p>
                     </div>
                     <div class="card-footer">
-                        <a href="./adirondackPeaks.html" class="btn btn-primary btn-lg">Click to choose your peak!</a>
+                        <button type="submit" data-peak="giant" class="btn btn-primary btn-lg">
+                            Click to choose your trail!
+                        </button>
                     </div>
                 </div>
                 <div class="card">
-                    <img src="./assets/img/katahdin.jpg" class="card-img-top img-fluid" alt="...">
+                    <img src="./assets/img/mtMarcy.jpg" class="card-img-top" alt="..." />
                     <div class="card-body">
-                        <h5 class="card-title">Northern Maine</h5>
-                        <p class="card-text">This region will present you with beautiful lakes, and mountains that seem to have been transplanted from the West Coast.  Come take a look at what Maine has to offer.</p>
+                        <h5 class="card-title">Mt Marcy</h5>
+                        <p class="card-text">
+                            Mt Marcy is the highest peak in the state of New York.  Be sure to pack appropriately for this long and enjoyable peak.
+                        </p>
                     </div>
                     <div class="card-footer">
-                        <a href="./peaks.html" class="btn btn-primary btn-lg">Click to choose your peak!</a>
+                        <button type="submit" data-peak="marcy" class="btn btn-primary btn-lg">
+                            Click to choose your trail!
+                        </button>
                     </div>
                 </div>
-                <div class="card">
-                    <img src="./assets/img/presidentials.jpg" class="card-img-top img-fluid" alt="...">
-                    <div class="card-body">
-                        <h5 class="card-title">The Presidentials</h5>
-                        <p class="card-text">This range holds the record for the largest alpine zone in our region with some of most beautiful and dramatic views.</p>
-                    </div>
-                    <div class="card-footer">
-                        <a href="./peaks.html" class="btn btn-primary btn-lg">Click to choose your peak!</a>
-                    </div>
-                </div>
+                
             </div>
         </div>
-
     </main>
     <!-- Footer -->
     <footer>
@@ -126,7 +124,8 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
     integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
     crossorigin="anonymous"></script>
-    <script type="text/javascript" src="js/members.js"></script>
+    <script type="text/javascript" src="js/peakSelection.js"></script>
+
 </body>
 
 </html>

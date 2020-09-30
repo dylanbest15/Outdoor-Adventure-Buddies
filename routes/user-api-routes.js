@@ -26,7 +26,7 @@ module.exports = function (app) {
           userID: req.params.id
         }
       });
-      console.log(findFavorites);
+      
       const newTrailIDs = [];
       findFavorites.forEach(({HikingTrailId})=> {
         newTrailIDs.push(HikingTrailId);
@@ -38,7 +38,7 @@ module.exports = function (app) {
           }
         }
       });
-      console.log(findFavorites, favoriteTrailNames);
+      
       const data = {userFavorites: findFavorites, favoritesTrailNames: favoriteTrailNames};
       res.json(data);
     } catch(err) {

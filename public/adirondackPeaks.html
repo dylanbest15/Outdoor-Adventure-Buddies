@@ -5,7 +5,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Adventure Buddies</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous" />
     <link rel="stylesheet" href="./stylesheets/cardstyles.css" />
     <link rel="stylesheet" href="./stylesheets/style.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
@@ -49,7 +50,7 @@
     <!-- Navigation Menu -->
 
     <main class="mt-4">
-        
+
         <div class="card bg-dark text-white">
             <img src="./assets/img/snowpeak.jpeg" height="350" class="card-img" alt="hero pic" />
             <div class="peak-pic card-img-overlay">
@@ -75,7 +76,7 @@
                         </p>
                     </div>
                     <div class="card-footer">
-                        <button type="submit" data-peak="giant" class="btn btn-primary btn-lg">
+                        <button type="submit" data-peak="giant" class="btn btn-primary btn-lg peakButton">
                             Click to choose your trail!
                         </button>
                     </div>
@@ -85,18 +86,38 @@
                     <div class="card-body">
                         <h5 class="card-title">Mt Marcy</h5>
                         <p class="card-text">
-                            Mt Marcy is the highest peak in the state of New York.  Be sure to pack appropriately for this long and enjoyable peak.
+                            Mt Marcy is the highest peak in the state of New York. Be sure to pack appropriately for
+                            this long and enjoyable peak.
                         </p>
                     </div>
                     <div class="card-footer">
-                        <button type="submit" data-peak="marcy" class="btn btn-primary btn-lg">
+                        <button type="submit" data-peak="marcy" class="btn btn-primary btn-lg peakButton">
                             Click to choose your trail!
                         </button>
                     </div>
                 </div>
-                
+
             </div>
         </div>
+        
+        <section class="trailsList row row-cols-1 row-cols-md-4">
+            <template id="trails-template">
+                <div class="card trail-item">
+                    <img class="trail-photo img-fluid" width="250px" height="auto" src="#" alt="Picture of trail">
+                    <div class="card-body">
+                        <h3 class="trail-title"></h3>
+                        <p><span class="trail-description"></span></p>
+                        <p>Mileage: <span class="mileage"></span></p>
+                        <p>Elevation gain: <span class="elevation-gain"></span></p>
+                        <button type="button" data-trailId class="btn btn-danger btn-sm add-button trailButton">
+                            Add to Bucket List!</button>
+                    </div>
+                    
+                </div>
+                </template>
+
+        </section>
+
     </main>
     <!-- Footer -->
     <footer>
@@ -122,8 +143,8 @@
     <!-- Footer -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
-    integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
-    crossorigin="anonymous"></script>
+        integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+        crossorigin="anonymous"></script>
     <script type="text/javascript" src="js/peakSelection.js"></script>
 
 </body>

@@ -29,11 +29,11 @@
     "no-unreachable": "error",
     "no-unused-vars": "error",
     "no-var": "error",
-    "prefer-arrow-callback": "error",
+    "prefer-arrow-callback": "off",
     "prefer-const": "error",
     "prettier/prettier": "off",
     "quotes": ["off", "double"],
-    "semi": ["error", "always"],
+    "semi": ["off", "always"],
     "vars-on-top": "error",
     "yoda": "error"
   }

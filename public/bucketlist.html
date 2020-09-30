@@ -14,11 +14,12 @@
   <!-- font awesome cdn -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
-        integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous" />
+    integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous" />
 </head>
 
 <body class="bucketlist-body">
 
+  <!-- navbar -->
   <header>
     <nav class="navbar fixed-top navbar-expand-lg navbar-light navbg bg-light">
       <a class="navbar-brand" href="./index.html">Outdoor Adventure Buddies</a>
@@ -56,25 +57,28 @@
 
   <main class="bucketlist-main">
 
-
+    <!-- jumbotron -->
     <div class="jumbotron jumbotron-fluid bucketlist-jumbotron">
       <h1 class="display-4 text-center">Your Bucket List</h1>
       <p class="lead text-center">Life is short. What adventure will you tick off next?</p>
     </div>
 
+    <!-- bucketlist form -->
     <div class="container bucketlist">
       <form class="bucketlist-form">
+        <h2>Show me adventure buddies for...</h2>
         <ul class="list-group">
-          <!-- <template id="list-template"> -->
-          <li class="list-group-item bucketlist-item">
-            <div class="form-check">
-              <input type="checkbox" class="form-check-input">
-              <label class="form-check-label" for="exampleCheck1">Example Text</label>
-              <button type="button" class="btn btn-danger btn-sm delete-button">
-                <i class="fa fa-trash" aria-hidden="true"></i></button>
-            </div>
-          </li>
-          <!-- </template> -->
+          <template id="list-template">
+            <li class="list-group-item bucketlist-item">
+              <div class="form-check">
+                <input type="checkbox" class="form-check-input">
+                <label class="form-check-label" for="exampleCheck1"></label>
+                <span class="trail-text"></span>
+                <button type="button" class="btn btn-danger btn-sm delete-button">
+                  <i class="fa fa-trash" aria-hidden="true"></i></button>
+              </div>
+            </li>
+          </template>
         </ul>
         <div class="center">
           <button type="submit" class="btn btn-light btn-outline-light btn-lg find-buddies">
@@ -82,20 +86,51 @@
             Find Adventure Buddies!</button>
         </div>
       </form>
+
+      <!-- buddy modal -->
+      <div id=buddy-modal class="modal">
+        <div class="modal-content">
+          <span class="span-close"><button class="close">&times;</button></span>
+          <p>example text</p>
+        </div>
+      </div>
     </div>
 
   </main>
 
+  <!-- Footer -->
   <footer>
     <div>Outdoor Adventure Buddies © 2020</div>
     <br />
     <div class="social">
-      <a href="https://www.facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a>
-      <a href="https://www.instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
-      <a href="#"><i class="far fa-envelope"></i></a>
-      <a href="#"><i class="fas fa-mobile-alt"></i></a>
+        <a href="https://www.facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a>
+        <a href="https://www.instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="far fa-envelope"></i></a>
+        <a href="#"><i class="fas fa-mobile-alt"></i></a>
     </div>
-  </footer>
+
+    <div>
+        <a class="white border-right" target="_blank" href="https://github.com/ARam2142">Dylan Best&ThickSpace;
+        </a>
+        <a class="white border-right" target="_blank" href="https://github.com/johnstoc13">&ThickSpace; Chad
+            Laflamme
+            &ThickSpace;
+        </a>
+        <a class="white border-right" target="_blank" href="https://github.com/mwoodervin">&ThickSpace; Brendan
+            Leighton
+            &ThickSpace;
+        </a>
+        <a class="white border-right" target="_blank" href="https://github.com/tbourgoin630">&ThickSpace; Andres
+            Ramirez
+            &ThickSpace;
+        </a>
+        <a class="white border-right" target="_blank" href="https://github.com/mwoodervin">&ThickSpace; Kayla Dunphe
+            &ThickSpace;
+        </a>
+        <a class="white" target="_blank" href="https://github.com/tbourgoin630">&ThickSpace; Alex Bertrand</a>
+    </div>
+</footer>
+<!-- Footer -->
 
   <!-- jquery cdn -->
   <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>

@@ -46,4 +46,8 @@ module.exports = function(app) {
   app.get("/trails", isAuthenticated, (req, res) => {
     res.sendFile(path.join(__dirname, "../public/trails.html"));
   });
+
+  app.get("/adirondackPeaks", isAuthenticated, (req, res) => {
+    res.sendFile(path.join(__dirname, "../public/adirondackPeaks.html"));
+  });
 };

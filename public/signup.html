@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-  <title>Passport Authentication</title>
+  <title>Create An Account</title>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
@@ -28,21 +28,6 @@
                     <a class="nav-link" href="./login.html">Login</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="./signup.html">Sign Up</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="./bucketlist.html">Bucket List</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="./regions.html">Hiking</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#climbing">Climbing</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#travel">Travel</a>
-                </li>
-                <li class="nav-item">
                     <a class="nav-link" href="#contact">Contact Us</a>
                 </li>
             </ul>
@@ -56,6 +41,7 @@
   <br />
   <br />
 
+  <!-- Sign Up Form -->
   <nav class="navbar navbar-default">
     <div class="container-fluid">
       <div class="navbar-header">
@@ -65,7 +51,7 @@
   <div class="container">
     <div class="row">
       <div class="col-md-6 col-md-offset-3">
-        <h2>Sign Up Form</h2>
+        <h2>Create An Account</h2>
         <br />
         <form class="signup">
           <div class="form-group">
@@ -93,16 +79,16 @@
             <input type="text" class="form-control" id="age" placeholder="Age">
           </div>
           <div class="form-group">
-            <label for="bio">Bio</label>
-            <input type="text" class="form-control" id="bio" placeholder="Bio">
-          </div>
-          <div class="form-group">
             <label for="gender">Gender</label>
             <select class="form-control" id="gender">
               <option>Gender</option>
               <option>Male</option>
               <option>Female</option>
             </select>
+          </div>
+          <div class="form-group">
+            <label for="bio">Bio</label>
+            <input type="text" class="form-control" id="bio" placeholder="Bio">
           </div>
           <div style="display: none" id="alert" class="alert alert-danger" role="alert">
             <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
@@ -112,27 +98,38 @@
           <button type="submit" class="btn btn-primary">Sign Up</button>
         </form>
         <br />
-        <p>Or log in <a href="./login.html">here</a></p>
+        <!-- <p>Or log in <a href="./login.html">here</a></p> -->
       </div>
     </div>
   </div>
+    <!-- Sign Up Form -->
 
   <br />
   <br />
   <br />
 
-      <!-- Footer -->
-      <footer>
-        <div>Outdoor Adventure Buddies © 2020</div>
-        <br />
-        <div class="social">
-            <a href="https://www.facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a>
-            <a href="https://www.instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
-            <a href="#"><i class="far fa-envelope"></i></a>
-            <a href="#"><i class="fas fa-mobile-alt"></i></a>
-        </div>
-    </footer>
-    <!-- Footer -->
+<!-- Footer -->
+<footer>
+  <div>Outdoor Adventure Buddies © 2020</div>
+  <br />
+  <div class="social">
+      <a href="https://www.facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a>
+      <a href="https://www.instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+      <a href="#"><i class="far fa-envelope"></i></a>
+      <a href="#"><i class="fas fa-mobile-alt"></i></a>
+  </div>
+  <br />
+
+  <div class="github">
+      <a target="_blank" href="https://github.com/dylanbest15">Dylan Best</a>&nbsp;&#124;&nbsp;
+      <a target="_blank" href="https://github.com/cjlaflamme1">Chad Laflamme</a>&nbsp;&#124;&nbsp;
+      <a target="_blank" href="https://github.com/BR3NDAN-L8N">Brendan Leighton</a>&nbsp;&#124;&nbsp;
+      <a target="_blank" href="https://github.com/ARam2142">Andres Ramirez</a>&nbsp;&#124;&nbsp;
+      <a target="_blank" href="https://github.com/kdunphe">Kayla Dunphe</a>&nbsp;&#124;&nbsp;
+      <a target="_blank" href="https://github.com/ambertrand">Alex Bertrand</a>
+  </div>
+</footer>
+<!-- Footer -->
 
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>

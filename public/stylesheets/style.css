@@ -89,6 +89,9 @@ footer {
   text-align: center;
   padding: 50px;
   font-family: Poppins, sans-serif;
+  /* position: absolute; */
+  bottom: 0;
+  width: 100%;
 }
 
 .social {

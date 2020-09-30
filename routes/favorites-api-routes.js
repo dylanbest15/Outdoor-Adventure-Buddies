@@ -6,8 +6,9 @@ module.exports = function (app) {
     // This function will hopefully generate a list of buddies when selecting one trail.
     app.get("/api/buddyList/:id", async (req, res) => {
         try{
-            
-            const currentUser = req.body.userID.toString();
+            console.log(req.user.id);
+            const currentUser = req.user.id.toString();
+            console.log(currentUser);
             // This finds all of the matching favorites with the trail id.
             const matchingFavorites = await db.Favorite.findAll({
                 where: {

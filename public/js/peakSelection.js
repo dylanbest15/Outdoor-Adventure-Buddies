@@ -7,6 +7,7 @@ $(document).ready(() => {
             console.log(peakId);
             const trailList = await $.get(`/api/hikingTrails/${peakId}`);
             console.log(trailList);
+            trailSection.empty();
             trailList.forEach(({ id, trail_name, mileage, elevation_gain, description, trail_photo}) => {
                 const newTrail = trailItem.clone();
                 newTrail.find("img.trail-photo").attr("src", trail_photo);

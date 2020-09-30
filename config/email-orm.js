@@ -3,17 +3,7 @@ require('dotenv').config();
 
 sgMail.setApiKey(process.env.SendGridAPI);
 
-
-sendEmail = (to, subject, html) => {
-  console.log("sendEmail function has started")
-  const msg = {
-    to,
-    from: process.env.SendGridAdminEmail,
-    // template_id: ,
-    subject,
-    html,
-  };
-
+sendEmail = (msg) => {
   (async () => {
     try {
       await sgMail.send(msg);
@@ -26,10 +16,23 @@ sendEmail = (to, subject, html) => {
       }
     }
   })();
+},
+
+userToUser = (to, html) => {
+
+  console.log("sendEmail function has started");
+
+  const msg = {
+    to,
+    from: process.env.SendGridAdminEmail,
+    // template_id: ,
+    subject: "A New Adventure Buddy Awaits!",
+    html,
+  };
+
+  sendEmail(msg);
 }
 
-
-
-
-
-module.exports = sendEmail;
+module.exports = {
+  userToUser
+};

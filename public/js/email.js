@@ -4,11 +4,18 @@ $(document).ready(() => {
 
     emailForm.on("submit", event => {
         event.preventDefault();
+
+        const emailInfo = {
+            message: textInput.val().trim(),
+            receiver: "br3ndan.l8n@gmail.com",
+            sender: getSenderUserEmail()
+        }
+
         const emailData = {
-            html: textInput.val().trim(),
-            subject: "this is the subject",
-            to: $("#sender-message").val().trim(),
-            from: getSenderUserEmail()
+            html: emailInfo.message,
+            to: emailInfo.receiver,
+            from: emailInfo.sender,
+            emailInfo
         };
 
         if (!emailData.html) {
@@ -28,7 +35,7 @@ $(document).ready(() => {
                 window.location.replace("/bucketlist.html");
                 // If there's an error, handle it by throwing up a bootstrap alert
             })
-            .catch(err, function() {
+            .catch((err) => {
                 console.log(err);
             });
     }

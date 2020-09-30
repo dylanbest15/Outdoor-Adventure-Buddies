@@ -16,17 +16,45 @@ sendEmail = (msg) => {
       }
     }
   })();
-},
+}
 
-userToUser = (to, html) => {
+createDynamicTemplateData = (userData) => {
+  let templateData = {
+    userTo: userData.to,
+    userFrom: userData.from,
+    userMessage: userData.message,
+  }
 
-  console.log("sendEmail function has started");
+  return JSON.stringify(templateData);
+}
+
+userToUser = (to, userData) => {
+
+  console.log("Send an email: user-to-user function has started");
+  
+  // const templateData = createDynamicTemplateData(userData);
+  // console.log(`\n\n***\n\nthis is the templateData JSON, `, templateData);
+
+  const msg = {
+    to,
+    from: process.env.SendGridAdminEmail,
+    dynamic_template_data: userData,
+    template_id: "d-f9b1f80152414cbf8f9f9fec32f6398f"
+  };
+
+  console.log(`\n\n***\n\nthis is dynamic_template_data, `, msg.dynamic_template_data);
+
+  sendEmail(msg);
+}
+
+adminToUser = (to, html) => {
+  console.log("Send an email: admin-to-user function has started");
 
   const msg = {
     to,
     from: process.env.SendGridAdminEmail,
     // template_id: ,
-    subject: "A New Adventure Buddy Awaits!",
+    subject: "You Contacted An Adventurer!",
     html,
   };
 
@@ -34,5 +62,6 @@ userToUser = (to, html) => {
 }
 
 module.exports = {
-  userToUser
+  userToUser,
+  adminToUser
 };

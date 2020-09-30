@@ -81,6 +81,10 @@ div.card-body {
   background-color: rgba(56, 56, 151, 0.384);
 }
 
+p.invalid-input {
+  display: none;
+  color: #ff0000;
+}
 
 /* FOOTER */
 footer {

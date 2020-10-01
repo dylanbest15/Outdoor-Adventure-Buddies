@@ -26,11 +26,13 @@ $(function () {
     $.ajax(`/api/favorites/${userID}`, {
       method: "GET"
     }).then(function ({ userFavorites, favoritesTrailNames } = result) {
-
+      console.log(userFavorites);
+      console.log(favoritesTrailNames);
       // create bucketlist item for each favorited trail
-      for (let i = 0; i < favoritesTrailNames.length; i++) {
+      for (let i = 0; i < userFavorites.length; i++) {
         let newListItem = listItem.clone();
-        newListItem.find("span.trail-text").text(favoritesTrailNames[i].trail_name);
+        let trailName = favoritesTrailNames.find(element => element.id === userFavorites[i].HikingTrailId);
+        newListItem.find("span.trail-text").text(trailName.trail_name);
         newListItem.find("input.form-check-input").attr("id", userFavorites[i].HikingTrailId);
         newListItem.find("button.delete-button").attr("id", userFavorites[i].id);
         bucketlist.append(newListItem);
@@ -53,6 +55,7 @@ $(function () {
   // delete favorite click event
   $(document).on("click", "button.delete-button", function (event) {
     let id = $(this).attr("id");
+    console.log(id);
     // delete favorites ajax request
     $.ajax(`/api/favorites/${id}`, {
       type: "DELETE"
@@ -83,6 +86,12 @@ $(function () {
           buddyList.append(newBuddyItem);
         }
       }
+    }).catch((err) => {
+      console.log(err);
+      // clear list and show buddy modal with error
+      buddyList.empty();
+      buddyModal.style.display = "block";
+      buddyList.append("<p>").text("No buddies found... Try picking another trail!");
     })
   })
 
@@ -100,8 +109,11 @@ $(function () {
 
   // email button click event
   $(document).on("click", "button.email-buddy", function (event) {
-
     event.preventDefault();
+
+    // disable button
+    $(this).text("Email Sent!");
+    $(this).prop("disabled", true);
 
     // recipients email and name for email template
     emailAddress = $(this).attr("id");

@@ -40,7 +40,12 @@ $(function () {
 
   // checkbox change event
   $(document).on("change", "input.form-check-input", function (event) {
-    currentTrailId = $(this).attr("id");
+    if(currentTrailId === $(this).attr("id")) {
+      currentTrailId = 0;
+    }
+    else {
+      currentTrailId = $(this).attr("id");
+    }
     // uncheck all other checkboxes
     $("input.form-check-input").not(this).prop("checked", false);
   })

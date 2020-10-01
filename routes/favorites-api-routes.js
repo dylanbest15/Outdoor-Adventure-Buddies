@@ -40,15 +40,27 @@ module.exports = function (app) {
     });
 
     // add new favorite
-    app.post("/api/favorites", (req, res) => {
+    app.post("/api/favorites", async (req, res) => {
         const trailId = req.body.trailId;
-        
-        db.Favorite.create({
-           UserId: req.user.id,
-           HikingTrailId: trailId
-        }).then((newFavorite) => {
-            res.json(newFavorite);
-        }).catch((err) => res.json(err));
+        const currentUser = req.user.id;
+        const currentFavorites = await db.Favorite.findAll();
+        const listedFavorites = [];
+        currentFavorites.forEach(({UserId, HikingTrailId}) => {
+            if((trailId === HikingTrailId) && (currentUser === UserId)) {
+                listedFavorites.push({
+                    UserId: UserId,
+                    HikingTrailId: HikingTrailId
+                });
+            }
+        });
+        if(listedFavorites.length === 0) {
+            db.Favorite.create({
+               UserId: currentUser,
+               HikingTrailId: trailId
+            }).then((newFavorite) => {
+                res.json(newFavorite);
+            }).catch((err) => res.json(err));
+        }
     });
 
     // Delete a favorite

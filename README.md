@@ -83,7 +83,9 @@ Project Link: [Outdoor Adventure Buddies]
 * [www.linkedin.com/in/chad-j-laflamme](www.linkedin.com/in/chad-j-laflamme)
 
 ## Andres Ramirez
-
+* https://github.com/ARam2142?tab=repositories
+* https://www.linkedin.com/in/andres-ramirez-8b07487b/
+* andresaaramirez730@gmail.com
 
 ## Kayla Dunphe
 * [kayla.dunphe@gmail.com](kayla.dunphe@gmail.com)

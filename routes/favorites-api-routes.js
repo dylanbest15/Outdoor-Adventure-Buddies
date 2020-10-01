@@ -33,6 +33,8 @@ module.exports = function (app) {
                     }
                 })
                 res.json(matchingBuddies)
+            } else {
+                res.sendStatus(418);
             }
             
             

@@ -112,7 +112,8 @@ $(function () {
         console.log(email);
         return emailData = {
           userTo: emailAddress,
-          userFrom: email
+          userFrom: email,
+          userFromName: recipientName
         };
       }).then(() => {
         if (!emailData.userTo || !emailData.userFrom) {

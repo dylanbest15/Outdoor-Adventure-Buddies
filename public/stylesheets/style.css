@@ -1,11 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
 
-/* form.signup,
-form.login {
-  margin-top: 50px;
-} */
-
-
 body {
   background-color: lightgray;
   font-family: Poppins, sans-serif;
@@ -29,18 +23,45 @@ h3 {
   color: white;
 }
 
+h4 {
+  font-family: Poppins, sans-serif;
+}
+
 p {
   font-family: Poppins, sans-serif;
 }
 
+
+/* NAVIGATION */
+nav.navbar {
+  font-family: Poppins, sans-serif;
+}
+
+.navbar-brand.logo  {
+  text-decoration: none;
+  color: white;
+}
+
+nav.navbar .nav-item .nav-link {
+  font-family: Poppins, sans-serif;
+  text-decoration: none;
+  color: white;
+}
+
+nav.navbar-light {
+  font-family: Poppins, sans-serif;
+  background-color: steelblue;
+}
+
+
+/* PAGE HEROS */
 .jumbotron {
   width: 100%;
-  
 }
 
 .hero {
   height: 100vh;
-  background-image: url("https://images.pexels.com/photos/697243/pexels-photo-697243.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
+  background-image: url(../assets/img/friends-hiking.jpg);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -56,32 +77,16 @@ p {
   position: relative;
 }
 
+.hero-signup {
+  background-image: url("https://images.pexels.com/photos/129105/pexels-photo-129105.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+}
+
 .hero-jumbotron {
   background: none;
-}
-
-
-/* NAVIGATION */
-nav.navbar {
-  font-family: Poppins, sans-serif;
-  /* background-color: #fff!important; */
-}
-
-/* #container {
-  position: relative;
-  text-align: center;
-} */
-
-
-.btn {
-  border-radius: 20px;
-  padding: 5px 40px;
-  font-size: 20px;
-}
-
-.btn a {
-  text-decoration: none;
-  color: white;
 }
 
 .centered {
@@ -92,7 +97,34 @@ nav.navbar {
 }
 
 
-/*choices*/
+/* BUTTONS */
+.btn {
+  border-radius: 20px;
+  border: 0px solid;
+  padding: 5px 40px;
+  font-size: 20px;
+  background-color: steelblue;
+  color: white;
+}
+
+.btn a {
+  text-decoration: none;
+  color: white;
+}
+
+.btn:hover {
+  background-color: white;
+  color: steelblue;
+}
+
+.btn a:hover {
+  text-decoration: none;
+  color: steelblue;
+}
+
+
+
+/* CHOICES */
 div.card-body {
   background-color: rgba(56, 56, 151, 0.384);
 }
@@ -103,18 +135,18 @@ p.invalid-input {
 }
 
 
-/* LOGIN PAGE */
 
+/* LOGIN & SIGNUP PAGES */
 .col-sm-6 {
   background-color: steelblue;
   color: white;
   padding: 50px;
   border-radius: 25px;
-  margin-top: 100px;
+  margin-top: 80px;
   opacity: 90%;
 }
 
-.login input {
+.login input, .signup input, .form-control {
   border-radius: 20px;
 }
 
@@ -130,10 +162,9 @@ p.invalid-input {
 
 
 
-
 /* FOOTER */
 footer {
-  background: #666;
+  background: #999999;
   color: #fff;
   text-align: center;
   padding: 50px;
@@ -157,7 +188,7 @@ footer {
 }
 
 .social a:hover {
-  color: lightseagreen;
+  color: steelblue;
 }
 
 .github {
@@ -168,7 +199,7 @@ footer {
 }
 
 .github a {
-  color: lightseagreen;
+  color: steelblue;
   text-decoration: none;
   padding: 5px;
 }
@@ -178,10 +209,11 @@ footer {
 }
 
 
+
+/* MEDIA QUERIES */
 @media (max-width: 576px) {
   .hero {
-    background-image: url("https://images.pexels.com/photos/697243/pexels-photo-697243.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
-    /* background-size: 100%; */
+    background-image: url(../assets/img/friends-hiking.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;

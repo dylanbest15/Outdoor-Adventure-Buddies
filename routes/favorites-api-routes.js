@@ -22,18 +22,23 @@ module.exports = function (app) {
                 }
                 });
 
-            // res.json(matchingFavorites);
+            
             // This uses the array to return all of the User information.
-            const matchingBuddies = await db.User.findAll({
-                where: {
-                    id: {
-                        [Op.or]: buddyList
+            if(buddyList.length > 0) {
+                const matchingBuddies = await db.User.findAll({
+                    where: {
+                        id: {
+                            [Op.or]: buddyList
+                        }
                     }
-                }
-            });
+                })
+                res.json(matchingBuddies)
+            } else {
+                res.sendStatus(418);
+            }
+            
             
             // This sends all of the "buddies" to the front-end. Woohoo!
-            res.json(matchingBuddies);
         } catch(err) {
             res.send(err);
         }

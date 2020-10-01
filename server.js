@@ -21,7 +21,7 @@ app.use(passport.initialize());
 app.use(passport.session());
 
 // Set Handlebars.
-var exphbs = require("express-handlebars");
+const exphbs = require("express-handlebars");
 app.engine("handlebars", exphbs({ defaultLayout: "email" }));
 app.set("view engine", "handlebars");
 

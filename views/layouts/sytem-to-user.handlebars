@@ -1,9 +1,41 @@
-<main>
-    
-    <h1>Outdoor Adventure Buddies</h1>
-
-    <h2> Your message to {{ userTo }} was sent successfully!</h2>
-
-    <p> Here's what you said, "<i>{{ userMessage }}</i>"</p>
-
-</main>
+ <html>
+    <head>
+      <title></title>
+      <style type="text/css">
+        body{
+            margin: 0px;
+            padding: 0px;
+        }
+        main {
+            margin: 0px;
+            padding: 0px 10vw;
+            }
+          h1, h2 {
+            text-align: center;
+          }
+         header {
+             padding: 20px 0px;
+             margin: 0px;
+            background-color: black;
+            color: white;
+         }
+      </style>
+    </head>
+    <body>
+        <header>
+            <h1>Outdoor Adventure Buddies</h1>
+        </header>
+        <main>
+      
+            <h2>Your message was sucessfully sent!</h2>
+        
+            <p> 
+                <span style="color: #007aff">{{ userFromName }}</span> was sent your connection request and will respond if they too want to connect.
+            </p>
+         
+        </main>
+        <footer>
+                
+        </footer>
+    </body>
+</html>

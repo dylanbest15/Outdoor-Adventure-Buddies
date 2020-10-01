@@ -23,6 +23,7 @@ createDynamicTemplateData = (userData) => {
     userTo: userData.to,
     userFrom: userData.from,
     userMessage: userData.message,
+    userFromName: userData.userFromName
   }
 
   return JSON.stringify(templateData);

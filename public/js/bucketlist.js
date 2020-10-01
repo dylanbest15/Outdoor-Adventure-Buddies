@@ -83,6 +83,12 @@ $(function () {
           buddyList.append(newBuddyItem);
         }
       }
+    }).catch((err) => {
+      console.log(err);
+      // clear list and show buddy modal with error
+      buddyList.empty();
+      buddyModal.style.display = "block";
+      buddyList.append("<p>").text("No buddies found... Try picking another trail!");
     })
   })
 

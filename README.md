@@ -67,7 +67,9 @@ Project Link: [Outdoor Adventure Buddies]
 # Contact
 
 ## Dylan Best
-
+* [best.dylan15@gmail.com](best.dylan15@gmail.com)
+* [https://github.com/dylanbest15](https://github.com/dylanbest15)
+* [linkedin.com/in/dylanbest15](https://www.linkedin.com/in/dylanbest15)
 
 ## Brendan Leighton
 * [BR3NDAN.L8N@gmail.com](BR3NDAN.L8N@gmail.com)

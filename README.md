@@ -49,6 +49,7 @@ Create an interactive web app utilizing Node and Express server and backed by My
     * dotenv
     * eslint
     * nodemon
+    * Bootstrap
 
 
 
@@ -85,7 +86,9 @@ Project Link: [Outdoor Adventure Buddies]
 
 
 ## Kayla Dunphe
-
+* [kayla.dunphe@gmail.com](kayla.dunphe@gmail.com)
+* [https://github.com/kdunphe](https://github.com/kdunphe)
+* [linkedin.com/in/kayladunphe](https://www.linkedin.com/in/kayladunphe)
 
 ## Alex Bertrand
 * [alex.m.bertrand@gmail.com](alex.m.bertrand@gmail.com)

@@ -36,26 +36,22 @@ module.exports = function(app) {
   });
 
   app.get("/bucketlist", isAuthenticated, (req, res) => {
-    res.sendFile(path.join(__dirname, "../public/bucketlist.html"));
-  });
-
-  app.get("/card", isAuthenticated, (req, res) => {
-    res.sendFile(path.join(__dirname, "../public/card.html"));
+    res.render('bucketlist', {layout: "main"});
   });
 
   app.get("/peaks", isAuthenticated, (req, res) => {
-    res.sendFile(path.join(__dirname, "../public/peaks.html"));
+    res.render('peaks', {layout: "main"});
   });
 
   app.get("/regions", isAuthenticated, (req, res) => {
-    res.sendFile(path.join(__dirname, "../public/regions.html"));
+    res.render('regions', {layout: "main"});
   });
 
   app.get("/trails", isAuthenticated, (req, res) => {
-    res.sendFile(path.join(__dirname, "../public/trails.html"));
+    res.render('trails', {layout: "main"});
   });
 
   app.get("/adirondackPeaks", isAuthenticated, (req, res) => {
-    res.sendFile(path.join(__dirname, "../public/adirondackPeaks.html"));
+    res.render('adirondackPeaks', {layout: "main"});
   });
 };

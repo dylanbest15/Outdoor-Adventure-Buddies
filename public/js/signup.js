@@ -18,10 +18,7 @@ $(document).ready(() => {
       lastName: lastNameInput.val().trim(),
       userName: userNameInput.val().trim(),
       email: emailInput.val().trim(),
-      password: passwordInput.val().trim(),
-      age: ageInput.val().trim(),
-      bio: bioInput.val().trim(),
-      gender: genderInput
+      password: passwordInput.val().trim()
     };
 
     if (!userData.firstName && !userData.lastName && !userData.userName && !userData.email && !userData.password) {

@@ -3,11 +3,13 @@ const { Op } = require('sequelize');
 module.exports = function (app) {
   // This retrieves the Information of the current user.
   app.get("/api/user/:id", (req, res) => {
+    console.log('REQ.USER \n================\n', req.user);
     db.User.findOne({
       where: {
         id: req.params.id
       }
     }).then((UserId) => {
+      // save stuff localStorage
         res.json(UserId);
       }).catch((err) => console.log(err));
   });
@@ -26,7 +28,7 @@ module.exports = function (app) {
           userID: req.params.id
         }
       });
-      console.log(findFavorites);
+      
       const newTrailIDs = [];
       findFavorites.forEach(({HikingTrailId})=> {
         newTrailIDs.push(HikingTrailId);
@@ -38,7 +40,7 @@ module.exports = function (app) {
           }
         }
       });
-      console.log(findFavorites, favoriteTrailNames);
+      
       const data = {userFavorites: findFavorites, favoritesTrailNames: favoriteTrailNames};
       res.json(data);
     } catch(err) {

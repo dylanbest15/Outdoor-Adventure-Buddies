@@ -32,11 +32,12 @@ div.card-title.card-text {
 div.fondo-pic {
   background-image: linear-gradient(
   rgba(113, 147, 209, 0.699),
- rgba(70, 16, 94, 0.39)
+  rgba(70, 16, 94, 0.39)
   ),
   url("./assets/img/regionhero.jpeg")
 }
- 
+
+/*HERO PHOTO TEXT FOR ALL PAGES*/
 p.fondo.card-text {
   font-size: 22px;
   color: beige;

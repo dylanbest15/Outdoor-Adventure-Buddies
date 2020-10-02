@@ -52,20 +52,8 @@ adminToUser = (to, userData) => {
     to,
     from: process.env.SendGridAdminEmail,
     dynamic_template_data: userData,
-    template_id: "d-d6c995a75180408e9d39e14eb74c6b96"
-  };
-
-  sendEmail(msg);
-}
-
-userToAdmin = (userData) => {
-  console.log("Send an email: user-to-admin function has started");
-
-  const msg = {
-    to: process.env.SendGridAdminEmail,
-    from: process.env.SendGridAdminEmail,
-    dynamic_template_data: userData,
-    template_id: "d-d6c995a75180408e9d39e14eb74c6b96"
+    template_id: "d-d6c995a75180408e9d39e14eb74c6b96",
+    // html: handlebars.render()
   };
 
   sendEmail(msg);
@@ -73,6 +61,5 @@ userToAdmin = (userData) => {
 
 module.exports = {
   userToUser,
-  adminToUser,
-  userToAdmin
+  adminToUser
 };

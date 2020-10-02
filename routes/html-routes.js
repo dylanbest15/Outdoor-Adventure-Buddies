@@ -10,15 +10,7 @@ module.exports = function(app) {
     if (req.user) {
       res.render("index");
     }
-    res.render('index', {layout: "main"});
-  });
-
-  app.get("/signup", (req, res) => {
-    // If the user already has an account send them to the members page
-    if (req.user) {
-      res.redirect("/members");
-    }
-    res.render('signup', {layout: "main"});
+    res.sendFile(path.join(__dirname, "../public/signup.html"));
   });
 
   app.get("/login", (req, res) => {
@@ -26,36 +18,12 @@ module.exports = function(app) {
     if (req.user) {
       res.render("index");
     }
-    res.render('login', {layout: "main"});
+    res.sendFile(path.join(__dirname, "../public/login.html"));
   });
 
   // Here we've add our isAuthenticated middleware to this route.
   // If a user who is not logged in tries to access this route they will be redirected to the signup page
   app.get("/members", isAuthenticated, (req, res) => {
-<<<<<<< HEAD
-    res.render('members', {layout: "main"});
-  });
-
-  app.get("/bucketlist", isAuthenticated, (req, res) => {
-    res.render('bucketlist', {layout: "main"});
-  });
-
-  app.get("/peaks", isAuthenticated, (req, res) => {
-    res.render('peaks', {layout: "main"});
-  });
-
-  app.get("/regions", isAuthenticated, (req, res) => {
-    res.render('regions', {layout: "main"});
-  });
-
-  app.get("/trails", isAuthenticated, (req, res) => {
-    res.render('trails', {layout: "main"});
-  });
-
-  app.get("/adirondackPeaks", isAuthenticated, (req, res) => {
-    res.render('adirondackPeaks', {layout: "main"});
-  });
-=======
     res.render("index");
   });
 
@@ -79,5 +47,4 @@ module.exports = function(app) {
     res.render("regions");
   });
 
->>>>>>> dc65751ebb32e3dfef9a9fd191cae32ccc006418
 };

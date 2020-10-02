@@ -8,7 +8,7 @@ module.exports = function(app) {
   app.get("/", (req, res) => {
     // If the user already has an account send them to the members page
     if (req.user) {
-      res.redirect("/members");
+      res.render("index");
     }
     res.render('index', {layout: "main"});
   });
@@ -24,7 +24,7 @@ module.exports = function(app) {
   app.get("/login", (req, res) => {
     // If the user already has an account send them to the members page
     if (req.user) {
-      res.redirect("/members");
+      res.render("index");
     }
     res.render('login', {layout: "main"});
   });
@@ -32,6 +32,7 @@ module.exports = function(app) {
   // Here we've add our isAuthenticated middleware to this route.
   // If a user who is not logged in tries to access this route they will be redirected to the signup page
   app.get("/members", isAuthenticated, (req, res) => {
+<<<<<<< HEAD
     res.render('members', {layout: "main"});
   });
 
@@ -54,4 +55,29 @@ module.exports = function(app) {
   app.get("/adirondackPeaks", isAuthenticated, (req, res) => {
     res.render('adirondackPeaks', {layout: "main"});
   });
+=======
+    res.render("index");
+  });
+
+  app.get("/bucketlist", isAuthenticated, (req, res) => {
+    res.render("bucketList");
+  });
+
+  app.get("/adirondackPeaks", isAuthenticated, (req, res) => {
+    res.render("adirondackPeaks");
+  });
+
+  app.get("/northernMainePeaks", isAuthenticated, (req, res) => {
+    res.render("northernMainePeaks");
+  });
+
+  app.get("/presidentialPeaks", isAuthenticated, (req, res) => {
+    res.render("presidentialPeaks");
+  });
+
+  app.get("/regions", isAuthenticated, (req, res) => {
+    res.render("regions");
+  });
+
+>>>>>>> dc65751ebb32e3dfef9a9fd191cae32ccc006418
 };

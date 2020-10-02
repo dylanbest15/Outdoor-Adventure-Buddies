@@ -27,7 +27,7 @@ $(document).ready(() => {
 
   // window click event for modal
   window.onclick = function (event) {
-    if (event.target == comingSoon) {
+    if (event.target === comingSoon) {
       comingSoon.style.display = "none";
     }
   }

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 {{!-- MAIN --}}
 <main class="mt-4">
 
@@ -73,3 +74,76 @@
 
 {{!-- SCRIPTS --}}
 <script type="text/javascript" src="js/peakSelection.js"></script>
+=======
+<main class="mt-4">
+
+        <div class="card bg-dark text-white">
+            <img src="./assets/img/snowpeak.jpeg" height="250" class="card-img" alt="hero pic" />
+            <div class="peak-pic card-img-overlay">
+                <h1 class="card-title display-1">Peaks</h1>
+                <p class="fondo card-text">
+                    Home to some of the most wild and remote terrain on the East Coast, the Adirondacks will leave your legs and heart pumping.
+                </p>
+            </div>
+        </div>
+        <div class="container-fluid">
+            <br />
+            <h2 class="text-center">Select a Peak</h2>
+            <br />
+            <!--cards will populate api info-->
+            <div class="card-deck">
+                <div class="card">
+                    <img src="./assets/img/giantMtn.jpg" height="250" class="card-img-top img-fluid"
+                        alt="insert pic here" />
+                    <div class="card-body">
+                        <h5 class="card-title text-center">Giant Mtn</h5>
+                        <p class="card-text">
+                            A peak with beautiful scrambles and even nicer views.
+                        </p>
+                    </div>
+                    <div style="text-align:center" class="card-footer">
+                        <button type="submit" data-peak="giant" class="btn btn-primary btn-lg peakButton">
+                            Click to choose your trail!
+                        </button>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="./assets/img/mtMarcy.jpg" height="250" class="card-img-top img-fluid"
+                        alt="insert pic here" />
+                    <div class="card-body">
+                        <h5 class="card-title text-center">Mt Marcy</h5>
+                        <p class="card-text">
+                            Mt Marcy is the highest peak in the state of New York. Be sure to pack appropriately for
+                            this long and enjoyable peak.
+                        </p>
+                    </div>
+                    <div style="text-align:center" class="card-footer">
+                        <button type="submit" data-peak="marcy" class="btn btn-primary btn-lg peakButton">
+                            Click to choose your trail!
+                        </button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <br>
+        <section class="trailsList row row-cols-1 row-cols-md-4">
+            <template id="trails-template">
+                <div class="card trail-item">
+                    <img class="trail-photo img-fluid" height="auto" src="#" alt="Picture of trail">
+                    <div class="card-body">
+                        <h3 class="trail-title text-center"></h3>
+                        <p><span class="trail-description"></span></p>
+                        <p>Mileage: <span class="mileage"></span></p>
+                        <p>Elevation gain: <span class="elevation-gain"></span></p>
+                        <button type="button" data-trailId class="btn btn-danger btn-sm add-button trailButton">
+                            Add to Bucket List!</button>
+                    </div>
+
+                </div>
+            </template>
+
+        </section>
+
+    </main>
+>>>>>>> dc65751ebb32e3dfef9a9fd191cae32ccc006418

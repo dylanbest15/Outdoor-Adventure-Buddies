@@ -1,43 +1,50 @@
-<!-- HEADER -->
-<h1 align="center">Outdoor Adventure Buddies</h1>
-<p align="center">
-  Search for friends to explore nature's outdoor adventures!
-</p>
-<br />
+# Outdoor Adventure Buddies
+Search for friends to explore nature's outdoor adventures!
 
-  
+ [![License: Unlicense](https://img.shields.io/badge/license-Unlicense-blue.svg)](http://unlicense.org/) 
 
 
-<!-- TABLE OF CONTENTS -->
 # Table of Contents
 * [About the Project](#about-the-project)
-    * [Project Description](#group-project-2)
-    * [Finished Project Link](#finished-project)
+    * [Project Requirements](#project-requirements)
+    * [Project Description](#project-description)
+    * [Technologies](#technologies)
     * [Project Screenshot](#project-screenshot)
-* [Contact](#contact)
+* [Developer Team](#developer-team)
     * [Dylan Best](#dylan-best)
     * [Brendan Leighton](#brendan-leighton)
     * [Chad J Laflamme](#chad-j-laflamme)
     * [Andres Ramirez](#andres-ramirez)
     * [Kayla Dunphe](#kayla-dunphe)
     * [Alex Bertrand](#alex-bertrand)
-* [Acknowledgements](#acknowledgements)
+* [Collaboration](#collaboration)
+* [References](#references)
+* [License](#license)
 
 
 
-<!-- ABOUT THE PROJECT -->
 # About The Project
 
-## Project Description
-
+## Project Requirements
 Create an interactive web app utilizing Node and Express server and backed by MySQL database with a Sequelize ORM. Has to use handlebars.js and utilize both GET and POST routes to retrieve and add new data, using a new library, package or technology.
 
 
-## Technologies Used
+## Project Description
+Throughout these unprecedented times one thing has remained clear, people want to get out and explore the outdoors!  For these exact moments we created Outdoor Adventure Buddies.
+
+Our application allows users to create an account, search for hiking trails and best of all find buddies to hike with.  Users can also save trails to their bucket list for future hikes as well as find and message new buddies for their future adventures!
+
+
+[Start your Outdoor Adventure]()
+
+
+## Technologies
     * Basic: HTML, CSS, Javascript
+    * Bootstrap
     * JQuery
     * Hiking Project API
     * Node.js
+    * Axios
     * Express.js
     * Express-Handlebars
     * Passport.js
@@ -47,24 +54,19 @@ Create an interactive web app utilizing Node and Express server and backed by My
     * MySQL
     * Heroku
     * dotenv
-    * eslint
+    * ESLint
     * nodemon
 
 
 
-
-## Finished Project
-Project Link: [Outdoor Adventure Buddies]
-
-
 ## Project Screenshot
+![index screenshot](https://user-images.githubusercontent.com/65721950/94879159-75b88b00-042d-11eb-8f10-f588ea6bec38.png)
+![account page screenshot](https://user-images.githubusercontent.com/65721950/94879168-7d782f80-042d-11eb-91b6-4b240754b40e.png)
+![bucket list screenshot](https://user-images.githubusercontent.com/65721950/94879173-7fda8980-042d-11eb-8293-a33e3e408b76.png)
 
-![index screenshot](https://user-images.githubusercontent.com/65721950/94756051-71746b00-0364-11eb-9448-72b5ab1f8d05.png)
 
 
-
-<!-- CONTACT -->
-# Contact
+# Developer Team
 
 ## Dylan Best
 * [best.dylan15@gmail.com](best.dylan15@gmail.com)
@@ -82,18 +84,30 @@ Project Link: [Outdoor Adventure Buddies]
 * [www.linkedin.com/in/chad-j-laflamme](www.linkedin.com/in/chad-j-laflamme)
 
 ## Andres Ramirez
-
+* [andresaaramirez730@gmail.com](andresaaramirez730@gmail.com)
+* [https://www.linkedin.com/in/andres-ramirez-8b07487b/](https://www.linkedin.com/in/andres-ramirez-8b07487b/)
+* [https://github.com/ARam2142](https://github.com/ARam2142)
 
 ## Kayla Dunphe
-
+* [kayla.dunphe@gmail.com](kayla.dunphe@gmail.com)
+* [https://github.com/kdunphe](https://github.com/kdunphe)
+* [linkedin.com/in/kayladunphe](https://www.linkedin.com/in/kayladunphe)
 
 ## Alex Bertrand
 * [alex.m.bertrand@gmail.com](alex.m.bertrand@gmail.com)
 * [https://github.com/ambertrand](https://github.com/ambertrand)
 * [www.linkedin.com/in/alex-bertrand/](https://www.linkedin.com/in/alex-bertrand/)
 
-<!-- ACKNOWLEDGEMENTS -->
-# Acknowledgements
-* [Google](https://www.google.com/)
-* [Hiking Project API](https://www.hikingproject.com/data)
 
+# Collaboration
+If you would like to contribute to this project, please clone the repository, make your changes and submit a pull request for review by the developer team.
+
+# References
+* [Hiking Project API](https://www.hikingproject.com/data)
+* [Passport.js](http://www.passportjs.org/)
+* [SendGrid](https://sendgrid.com/)
+* The TA Team Bobby Hoffman and Mike Fernley for all their assistance
+
+
+# License
+This project is licensed under Unlicense

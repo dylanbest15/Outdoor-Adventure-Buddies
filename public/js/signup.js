@@ -6,9 +6,6 @@ $(document).ready(() => {
   const userNameInput = $("input#username");
   const emailInput = $("input#email");
   const passwordInput = $("input#password");
-  const ageInput = $("input#age");
-  const bioInput = $("input#bio");
-  const genderInput = $("input#gender");
 
   // When the signup button is clicked, we validate the email and password are not blank
   signUpForm.on("submit", event => {

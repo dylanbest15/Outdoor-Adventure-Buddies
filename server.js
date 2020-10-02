@@ -20,6 +20,14 @@ app.use(
 app.use(passport.initialize());
 app.use(passport.session());
 
+app.get("/", (req, res) => {
+  // If the user already has an account send them to the members page
+  if (req.user) {
+    res.render("index");
+  }
+  res.sendFile(path.join(__dirname, "../public/signup.html"));
+});
+
 // Set Handlebars.
 const exphbs = require("express-handlebars");
 app.engine("handlebars", exphbs({ defaultLayout: "main" }));

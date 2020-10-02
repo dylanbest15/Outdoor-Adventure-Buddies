@@ -1,0 +1,69 @@
+<main class="mt-4">
+
+        <div class="card bg-dark text-white">
+            <img src="./assets/img/snowpeak.jpeg" height="250" class="card-img" alt="hero pic" />
+            <div class="peak-pic card-img-overlay">
+                <h1 class="card-title display-1">Peaks</h1>
+                <p class="fondo card-text">
+                    The world is huge! There a countless places to go to with your
+                    adventure buddy. Scroll down to learn more
+                </p>
+            </div>
+        </div>
+        <div class="container-fluid">
+            <br />
+            <h2 class="text-center">Select a peak</h2>
+            <br/>
+            <!--cards will populate api info-->
+            <div class="card-deck">
+                <div class="card">
+                    <img src="./assets/img/katahdin2.jpg" height="250" class="card-img-top img-fluid" alt="insert pic here" />
+                    <div class="card-body">
+                        <h5 class="card-title">Mt Katahdin</h5>
+                        <p class="card-text">
+                            The knife edge and so much more.  Come visit New England's most unique peak. 
+                        </p>
+                    </div>
+                    <div class="card-footer">
+                        <button type="submit" data-peak="katahdin" class="btn btn-primary btn-lg peakButton">
+                            Click to choose your trail!
+                        </button>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="./assets/img/troutBrook.jpg" height="250" class="card-img-top img-fluid" alt="insert pic here" />
+                    <div class="card-body">
+                        <h5 class="card-title">Trout Brook Mtn</h5>
+                        <p class="card-text">
+                            Hiking isn't always about finding the highest peaks.  Come explore the vast low land wilderness that North Maine has to offer. 
+                        </p>
+                    </div>
+                    <div class="card-footer">
+                        <button type="submit" data-peak="troutBrook" class="btn btn-primary btn-lg peakButton">
+                            Click to choose your trail!
+                        </button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <br>
+        <section class="trailsList row row-cols-1 row-cols-md-4">
+            <template id="trails-template">
+                <div class="card trail-item">
+                    <img class="trail-photo img-fluid" height="auto" src="#" alt="Picture of trail">
+                    <div class="card-body">
+                        <h3 class="trail-title"></h3>
+                        <p><span class="trail-description"></span></p>
+                        <p>Mileage: <span class="mileage"></span></p>
+                        <p>Elevation gain: <span class="elevation-gain"></span></p>
+                        <button type="button" data-trailId class="btn btn-danger btn-sm add-button trailButton">
+                            Add to Bucket List!</button>
+                    </div>
+                    
+                </div>
+                </template>
+
+        </section>
+
+    </main>

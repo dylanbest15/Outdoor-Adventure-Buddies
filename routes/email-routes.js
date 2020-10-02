@@ -11,7 +11,11 @@ module.exports = function (app) {
         sendEmail.adminToUser(req.body.userFrom, req.body);
     });
 
-    app.get("/test", function (req, res) {
-        res.send("works")
+    app.post("/email/contact-us", (req, res) => {
+        console.log("setting up email template");
+
+        sendEmail.userToAdmin(req.body);
+
+        console.log(`\n\nreq.body === ${req.body}\n\n`);
     });
 };

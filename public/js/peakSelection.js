@@ -26,6 +26,8 @@ $(document).ready(() => {
     })
     $(document).on('click', "button.trailButton", (event) => {
         event.preventDefault();
+        $(event.target).text("Trail Added!");
+        $(event.target).prop("disabled", true);
         const trailId = $(event.target).attr("data-trailId");
         $.post(`api/favorites`, {trailId: trailId});
     })

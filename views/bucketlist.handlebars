@@ -1,61 +1,55 @@
 {{!-- MAIN --}}
 <main class="bucketlist-main">
 
-    <!-- jumbotron -->
-    <div class="jumbotron jumbotron-fluid bucketlist-jumbotron">
-      <h1 class="display-4 text-center">Your Bucket List</h1>
-      <p class="lead text-center">Life is short. What adventure will you tick off next?</p>
-    </div>
-    
-    <!-- bucketlist form -->
-    <div class="container bucketlist">
-      <form class="bucketlist-form">
-        <h3>Show me adventure buddies for...</h3>
-        <ul class="list-group trail-list">
-          <template id="list-template">
-            <li class="list-group-item bucketlist-item">
-              <div class="form-check">
-                <input type="checkbox" class="form-check-input">
-                <label class="form-check-label" for="exampleCheck1"></label>
-                <span class="trail-text"></span>
-                <button type="button" class="btn btn-danger btn-sm delete-button">
-                  <i class="fa fa-trash" aria-hidden="true"></i></button>
-              </div>
-            </li>
-          </template>
-        </ul>
-        <div class="center">
-          <button type="submit" class="btn btn-light btn-outline-light btn-lg find-buddies">
-            <i class="fa fa-hand-pointer-o" aria-hidden="true"></i>
-            Find Adventure Buddies!</button>
-        </div>
-      </form>
+  <!-- jumbotron -->
+  <div class="jumbotron jumbotron-fluid bucketlist-jumbotron">
+    <h1 class="display-4 text-center">Your Bucket List</h1>
+    <p class="lead text-center">Life is short. What adventure will you tick off next?</p>
+  </div>
 
-      <!-- buddy modal -->
-      <div id=buddy-modal class="modal">
-        <div class="modal-content">
-          <span class="span-close"><button class="close">&times;</button></span>
-          <ul class="list-group buddy-list">
-            <template id="buddy-template">
+  <!-- bucketlist form -->
+  <div class="container bucketlist">
+    <form class="bucketlist-form">
+      <h3>Show me adventure buddies for...</h3>
+      <ul class="list-group trail-list">
+        <template id="list-template">
+          <li class="list-group-item bucketlist-item">
+            <div class="form-check">
+              <input type="checkbox" class="form-check-input">
+              <label class="form-check-label" for="exampleCheck1"></label>
+              <span class="trail-text"></span>
+              <button type="button" class="btn btn-danger btn-sm delete-button">
+                <i class="fa fa-trash" aria-hidden="true"></i></button>
+            </div>
+          </li>
+        </template>
+      </ul>
+      <div class="center">
+        <button type="submit" class="btn btn-light btn-outline-light btn-lg find-buddies">
+          <i class="fa fa-hand-pointer-o" aria-hidden="true"></i>
+          Find Adventure Buddies!</button>
+      </div>
+    </form>
+
+    <!-- buddy modal -->
+    <div id=buddy-modal class="modal">
+      <div class="modal-content">
+        <span class="span-close"><button class="close">&times;</button></span>
+        <ul class="list-group buddy-list">
+          <template id="buddy-template">
             <li class="list-group-item buddylist-item">
               <span class="buddy-name"></span>
               <button class="btn btn-primary email-buddy">
                 <i class="fa fa-envelope"></i></button>
             </li>
-            </template>
-          </ul>
-        </div>
+          </template>
+        </ul>
       </div>
     </div>
+  </div>
 
-  </main>
+</main>
 {{!-- MAIN --}}
 
-  {{!-- SCRIPTS --}}
-  <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-  <!-- Bootstrap cdn -->
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
-  integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
-  crossorigin="anonymous"></script>
-  <!-- link to javascript -->
-  <script src="./js/bucketlist.js"></script>
+{{!-- SCRIPTS --}}
+<script src="./js/bucketlist.js"></script>

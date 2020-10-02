@@ -1,50 +1,46 @@
 <!-- Signup Form -->
-  <main class="hero-signup">
-    <section class="jumbotron hero-jumbotron">
-      <div class="container">
-        <div class="row">
-          <div class="col-sm-3"></div>
-          <div class="col-sm-6">
-            <h2>Create An Account</h2>
+<main class="hero-signup">
+  <section class="jumbotron hero-jumbotron">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-3"></div>
+        <div class="col-sm-6">
+          <h2>Create An Account</h2>
+          <br />
+          <form class="signup">
+            <div class="form-group">
+              <label for="firstname">First Name</label>
+              <input type="text" required="required" class="form-control" id="firstname" placeholder="First Name">
+            </div>
+            <div class="form-group">
+              <label for="lastname">Last Name</label>
+              <input type="text" required="required" class="form-control" id="lastname" placeholder="Last Name">
+            </div>
+            <div class="form-group">
+              <label for="username">Username</label>
+              <input type="text" required="required" class="form-control" id="username" placeholder="Username">
+            </div>
+            <div class="form-group">
+              <label for="email">Email Address</label>
+              <input type="email" required="required" class="form-control" id="email" placeholder="Email">
+            </div>
+            <div class="form-group">
+              <label for="password">Password</label>
+              <input type="password" required="required" class="form-control" id="password" placeholder="Password">
+            </div>
+            <div style="display: none" id="alert" class="alert alert-danger" role="alert">
+              <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
+              <span class="sr-only">Error:</span> <span class="msg"></span>
+            </div>
             <br />
-            <form class="signup">
-              <div class="form-group">
-                <label for="firstname">First Name</label>
-                <input type="text" required="required" class="form-control" id="firstname" placeholder="First Name">
-              </div>
-              <div class="form-group">
-                <label for="lastname">Last Name</label>
-                <input type="text" required="required" class="form-control" id="lastname" placeholder="Last Name">
-              </div>
-              <div class="form-group">
-                <label for="username">Username</label>
-                <input type="text" required="required" class="form-control" id="username" placeholder="Username">
-              </div>
-              <div class="form-group">
-                <label for="email">Email Address</label>
-                <input type="email" required="required" class="form-control" id="email" placeholder="Email">
-              </div>
-              <div class="form-group">
-                <label for="password">Password</label>
-                <input type="password" required="required" class="form-control" id="password" placeholder="Password">
-              </div>
-              <div style="display: none" id="alert" class="alert alert-danger" role="alert">
-                <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
-                <span class="sr-only">Error:</span> <span class="msg"></span>
-              </div>
-              <br />
-              <button type="submit" class="btn btn-primary login">Sign Up</button>
-            </form>
-            <div class="col-sm-3"></div>
-          </div>
-    </section>
-  </main>
-  <!-- Signup Form -->
+            <button type="submit" class="btn btn-primary login">Sign Up</button>
+          </form>
+          <div class="col-sm-3"></div>
+        </div>
+  </section>
+</main>
+<!-- Signup Form -->
 
-  <!-- Scripts -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
-    integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
-    crossorigin="anonymous"></script>
-  <script type="text/javascript" src="./js/signup.js"></script>
-  <!-- Scripts -->
+<!-- Scripts -->
+<script type="text/javascript" src="./js/signup.js"></script>
+<!-- Scripts -->

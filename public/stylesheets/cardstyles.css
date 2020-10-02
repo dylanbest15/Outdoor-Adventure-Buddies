@@ -1,12 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
 /*DECK CARDS STYLE*/
 div.card {
   background-color: rgba(93, 93, 199, 0.384);
   border-style: solid;
 }
 
-div.card-body {
-  /*text color*/
-  color:rgb(255, 255, 255);
+
+div.card-body, div.card-footer {
+  color: white;
 }
 
 .trail-photo {
@@ -16,8 +18,19 @@ div.card-body {
 }
 
 h1.card-title {
-  color: beige;
-  font-family: Georgia, 'Times New Roman', Times, serif;
+  color: white;
+  font-size: 36px;
+  font-family: Poppins, sans-serif;
+  text-align: center;
+  margin-top: 100px;
+}
+
+.fondo.card-text {
+  text-align: center;
+}
+
+.card-img-top {
+  height: 400px;
 }
 
 /*for all pages*/
@@ -40,7 +53,7 @@ div.fondo-pic {
 /*HERO PHOTO TEXT FOR ALL PAGES*/
 p.fondo.card-text {
   font-size: 22px;
-  color: beige;
+  color: white;
 }
   
 /*TRAILS*/
@@ -52,9 +65,9 @@ div.trails-pic {
   url("./assets/img/pacifictrails.jpeg")
 }
 
-h1.text-center {
-  color: whitesmoke;
-}
+/* h1.text-center {
+  color: white;
+} */
 
 /*PEAKS*/
 div.card.trail-item {

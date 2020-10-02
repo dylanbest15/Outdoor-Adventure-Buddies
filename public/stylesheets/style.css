@@ -260,6 +260,10 @@ div.modal-content p {
 
 /* MEDIA QUERIES */
 @media (max-width: 576px) {
+  .navbar-brand.logo  {
+    font-size: 14px;
+  }
+
   .hero {
     background-image: url(../assets/img/friends-hiking.jpg);
     background-repeat: no-repeat;

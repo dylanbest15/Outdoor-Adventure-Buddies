@@ -119,7 +119,6 @@ $(function () {
     emailAddress = $(this).attr("id");
     recipientName = $(this).attr("data-recipient");
 
-    // api request to grab current users email address
     async function getSenderUserEmail() {
       await $.get("/api/user_data", function ({ email }) {
         console.log(email);
@@ -139,7 +138,7 @@ $(function () {
       });
     };
 
-    // Sends data required for an email to be sent. 
+    // Does a post to the email route. 
     function sendEmail(emailData) {
       $.post("/email/send-email", emailData)
         .catch((err) => {

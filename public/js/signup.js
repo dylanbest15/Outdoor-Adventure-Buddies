@@ -15,7 +15,7 @@ $(document).ready(() => {
       lastName: lastNameInput.val().trim(),
       userName: userNameInput.val().trim(),
       email: emailInput.val().trim(),
-      password: passwordInput.val().trim()
+      password: passwordInput.val().trim(),
     };
 
     if (!userData.firstName && !userData.lastName && !userData.userName && !userData.email && !userData.password) {

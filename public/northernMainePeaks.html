@@ -5,7 +5,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Adventure Buddies</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous" />
     <link rel="stylesheet" href="./stylesheets/cardstyles.css" />
     <link rel="stylesheet" href="./stylesheets/style.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
@@ -16,8 +17,8 @@
 <body>
     <!-- Navigation Menu -->
     <header>
-        <nav class="navbar fixed-top navbar-expand-lg navbar-light navbg bg-light">
-            <a class="navbar-brand" href="./index.html">Outdoor Adventure Buddies</a>
+        <nav class="navbar fixed-top navbar-expand-lg navbar-light">
+            <a class="navbar-brand logo" href="./index.html">Outdoor Adventure Buddies</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
                 aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -37,7 +38,7 @@
                         <a class="nav-link" href="#travel">Travel</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="/logout">Logout</a>
+                        <a class="nav-link" href="#logout">Logout</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#contact">Contact Us</a>
@@ -49,9 +50,9 @@
     <!-- Navigation Menu -->
 
     <main class="mt-4">
-        
+
         <div class="card bg-dark text-white">
-            <img src="./assets/img/snowpeak.jpeg" height="350" class="card-img" alt="hero pic" />
+            <img src="./assets/img/snowpeak.jpeg" height="250" class="card-img" alt="hero pic" />
             <div class="peak-pic card-img-overlay">
                 <h1 class="card-title display-1">Peaks</h1>
                 <p class="fondo card-text">
@@ -63,58 +64,59 @@
         <div class="container-fluid">
             <br />
             <h2 class="text-center">Select a peak</h2>
-            <br />
+            <br/>
             <!--cards will populate api info-->
             <div class="card-deck">
                 <div class="card">
-                    <img src="..." class="card-img-top" alt="..." />
+                    <img src="./assets/img/katahdin2.jpg" height="250" class="card-img-top img-fluid" alt="insert pic here" />
                     <div class="card-body">
-                        <h5 class="card-title">Card title</h5>
+                        <h5 class="card-title">Mt Katahdin</h5>
                         <p class="card-text">
-                            This is a wider card with supporting text below as a natural
-                            lead-in to additional content. This content is a little bit
-                            longer.
+                            The knife edge and so much more.  Come visit New England's most unique peak. 
                         </p>
                     </div>
                     <div class="card-footer">
-                        <button type="submit" class="btn btn-primary btn-lg">
-                            Find Adventure Buddies!
+                        <button type="submit" data-peak="katahdin" class="btn btn-primary btn-lg peakButton">
+                            Click to choose your trail!
                         </button>
                     </div>
                 </div>
                 <div class="card">
-                    <img src="..." class="card-img-top" alt="..." />
+                    <img src="./assets/img/troutBrook.jpg" height="250" class="card-img-top img-fluid" alt="insert pic here" />
                     <div class="card-body">
-                        <h5 class="card-title">Card title</h5>
+                        <h5 class="card-title">Trout Brook Mtn</h5>
                         <p class="card-text">
-                            This card has supporting text below as a natural lead-in to
-                            additional content.
+                            Hiking isn't always about finding the highest peaks.  Come explore the vast low land wilderness that North Maine has to offer. 
                         </p>
                     </div>
                     <div class="card-footer">
-                        <button type="submit" class="btn btn-primary btn-lg">
-                            Find Adventure Buddies!
+                        <button type="submit" data-peak="troutBrook" class="btn btn-primary btn-lg peakButton">
+                            Click to choose your trail!
                         </button>
                     </div>
                 </div>
-                <div class="card">
-                    <img src="..." class="card-img-top" alt="..." />
-                    <div class="card-body">
-                        <h5 class="card-title">Card title</h5>
-                        <p class="card-text">
-                            This is a wider card with supporting text below as a natural
-                            lead-in to additional content. This card has even longer content
-                            than the first to show that equal height action.
-                        </p>
-                    </div>
-                    <div class="card-footer">
-                        <button type="submit" class="btn btn-primary btn-lg">
-                            Find Adventure Buddies!
-                        </button>
-                    </div>
-                </div>
+
             </div>
         </div>
+        <br>
+        <section class="trailsList row row-cols-1 row-cols-md-4">
+            <template id="trails-template">
+                <div class="card trail-item">
+                    <img class="trail-photo img-fluid" height="auto" src="#" alt="Picture of trail">
+                    <div class="card-body">
+                        <h3 class="trail-title"></h3>
+                        <p><span class="trail-description"></span></p>
+                        <p>Mileage: <span class="mileage"></span></p>
+                        <p>Elevation gain: <span class="elevation-gain"></span></p>
+                        <button type="button" data-trailId class="btn btn-danger btn-sm add-button trailButton">
+                            Add to Bucket List!</button>
+                    </div>
+                    
+                </div>
+                </template>
+
+        </section>
+
     </main>
     <!-- Footer -->
     <footer>
@@ -140,9 +142,10 @@
     <!-- Footer -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
-    integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
-    crossorigin="anonymous"></script>
-    <script type="text/javascript" src="js/members.js"></script>
+        integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+        crossorigin="anonymous"></script>
+    <script type="text/javascript" src="js/peakSelection.js"></script>
+
 </body>
 
 </html>

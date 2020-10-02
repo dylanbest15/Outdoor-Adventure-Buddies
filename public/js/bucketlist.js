@@ -96,13 +96,13 @@ $(function () {
   })
 
   // close modal click event
-  $("button.close").on("click", function (event) {
+  $(document).on("click", "button.close", function (event) {
     buddyModal.style.display = "none";
   })
 
   // window click event for modal
   window.onclick = function (event) {
-    if (event.target == buddyModal) {
+    if (event.target === buddyModal) {
       buddyModal.style.display = "none";
     }
   }

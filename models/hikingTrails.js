@@ -13,7 +13,7 @@ module.exports = function (sequelize, DataTypes) {
             type: DataTypes.STRING,
         },
         mileage: {
-            type: DataTypes.INTEGER,
+            type: DataTypes.DECIMAL(10,2),
         },
         elevation_gain: {
             type: DataTypes.INTEGER,

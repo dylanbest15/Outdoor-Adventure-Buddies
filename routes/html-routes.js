@@ -8,7 +8,7 @@ module.exports = function(app) {
   app.get("/", (req, res) => {
     // If the user already has an account send them to the members page
     if (req.user) {
-      res.redirect("/members");
+      res.render("index");
     }
     res.sendFile(path.join(__dirname, "../public/signup.html"));
   });
@@ -16,7 +16,7 @@ module.exports = function(app) {
   app.get("/login", (req, res) => {
     // If the user already has an account send them to the members page
     if (req.user) {
-      res.redirect("/members");
+      res.render("index");
     }
     res.sendFile(path.join(__dirname, "../public/login.html"));
   });
@@ -24,30 +24,27 @@ module.exports = function(app) {
   // Here we've add our isAuthenticated middleware to this route.
   // If a user who is not logged in tries to access this route they will be redirected to the signup page
   app.get("/members", isAuthenticated, (req, res) => {
-    res.sendFile(path.join(__dirname, "../public/members.html"));
+    res.render("index");
   });
 
   app.get("/bucketlist", isAuthenticated, (req, res) => {
-    res.sendFile(path.join(__dirname, "../public/bucketlist.html"));
-  });
-
-  app.get("/card", isAuthenticated, (req, res) => {
-    res.sendFile(path.join(__dirname, "../public/card.html"));
-  });
-
-  app.get("/peaks", isAuthenticated, (req, res) => {
-    res.sendFile(path.join(__dirname, "../public/peaks.html"));
-  });
-
-  app.get("/regions", isAuthenticated, (req, res) => {
-    res.sendFile(path.join(__dirname, "../public/regions.html"));
-  });
-
-  app.get("/trails", isAuthenticated, (req, res) => {
-    res.sendFile(path.join(__dirname, "../public/trails.html"));
+    res.render("bucketList");
   });
 
   app.get("/adirondackPeaks", isAuthenticated, (req, res) => {
-    res.sendFile(path.join(__dirname, "../public/adirondackPeaks.html"));
+    res.render("adirondackPeaks");
   });
+
+  app.get("/northernMainePeaks", isAuthenticated, (req, res) => {
+    res.render("northernMainePeaks");
+  });
+
+  app.get("/presidentialPeaks", isAuthenticated, (req, res) => {
+    res.render("presidentialPeaks");
+  });
+
+  app.get("/regions", isAuthenticated, (req, res) => {
+    res.render("regions");
+  });
+
 };

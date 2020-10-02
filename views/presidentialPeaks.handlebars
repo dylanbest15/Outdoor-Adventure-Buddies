@@ -1,0 +1,68 @@
+<main class="mt-4">
+
+        <div class="card bg-dark text-white">
+            <img src="https://images.pexels.com/photos/618833/pexels-photo-618833.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" height="350" class="card-img" alt="hero pic" />
+            <div class="peak-pic card-img-overlay">
+                <h1 class="card-title display-1">Peaks</h1>
+                <p class="fondo card-text">
+                   This range holds the record for the largest alpine zone in our region with some of most beautiful and dramatic views.
+                </p>
+            </div>
+        </div>
+        <div class="container-fluid">
+            <br />
+            <h2 class="text-center">Select a Peak</h2>
+            <br />
+            <!--cards will populate api info-->
+            <div class="card-deck">
+                <div class="card">
+                    <img src="./assets/img/mtWashington.jpg" class="card-img-top img-fluid" alt="A view of Mt Washington" />
+                    <div class="card-body">
+                        <h5 class="card-title">Mt Washington</h5>
+                        <p class="card-text">
+                            Ride a train or drive your car? No thanks.  Come experience New Englands tallest mountain by foot.  
+                        </p>
+                    </div>
+                    <div class="card-footer">
+                        <button type="submit" data-peak="washington" class="btn btn-primary btn-lg peakButton">
+                            Click to choose your trail!
+                        </button>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="./assets/img/mtMadison.jpg" class="card-img-top img-fluid" alt="A view of Mt Madison" />
+                    <div class="card-body">
+                        <h5 class="card-title">Mt Madison</h5>
+                        <p class="card-text">
+                            Mt Madison is one of the most beautiful peaks of the Northern Presidentials.  Swing by Madison Springs Hut for a coffee to celebrate!
+                        </p>
+                    </div>
+                    <div class="card-footer">
+                        <button type="submit" data-peak="madison" class="btn btn-primary btn-lg peakButton">
+                            Click to choose your trail!
+                        </button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        
+        <section class="trailsList row row-cols-1 row-cols-md-4">
+            <template id="trails-template">
+                <div class="card trail-item">
+                    <img class="trail-photo img-fluid" height="auto" src="#" alt="Picture of trail">
+                    <div class="card-body">
+                        <h3 class="trail-title"></h3>
+                        <p><span class="trail-description"></span></p>
+                        <p>Mileage: <span class="mileage"></span></p>
+                        <p>Elevation gain: <span class="elevation-gain"></span></p>
+                        <button type="button" data-trailId class="btn btn-danger btn-sm add-button trailButton">
+                            Add to Bucket List!</button>
+                    </div>
+                    
+                </div>
+                </template>
+
+        </section>
+
+    </main>

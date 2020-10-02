@@ -2,24 +2,23 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Adventure Buddies</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
-        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
-    <link rel="stylesheet" href="./stylesheets/style.css" type="text/css" />
-    <link rel="stylesheet" href="./stylesheets/cardstyles.css">
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous" />
+    <link rel="stylesheet" href="./stylesheets/cardstyles.css" />
+    <link rel="stylesheet" href="./stylesheets/style.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
         integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous" />
     <script src="https://code.jquery.com/jquery.js"></script>
 </head>
 
 <body>
-
     <!-- Navigation Menu -->
     <header>
-        <nav class="navbar fixed-top navbar-expand-lg navbar-light">
-            <a class="navbar-brand logo" href="./index.html">Outdoor Adventure Buddies</a>
+        <nav class="navbar fixed-top navbar-expand-lg navbar-light navbg bg-light">
+            <a class="navbar-brand" href="./index.html">Outdoor Adventure Buddies</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
                 aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -39,7 +38,7 @@
                         <a class="nav-link" href="#travel">Travel</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#logout">Logout</a>
+                        <a class="nav-link" href="/logout">Logout</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#contact">Contact Us</a>
@@ -49,55 +48,74 @@
         </nav>
     </header>
     <!-- Navigation Menu -->
+
     <main class="mt-4">
+
         <div class="card bg-dark text-white">
-            <img src="./assets/img/regionhero.jpeg" height="350" class="card-img" alt="hero pic">
-            <div class="fondo-pic card-img-overlay">
-                <h1 class="card-title display-1">Adventures</h1>
-                <p class="fondo card-text">The world is huge! There a countless places to go to with your adventure
-                    buddy.
-                    Scroll
-                    down to learn more</p>
+            <img src="./assets/img/snowpeak.jpeg" height="250" class="card-img" alt="hero pic" />
+            <div class="peak-pic card-img-overlay">
+                <h1 class="card-title display-1">Peaks</h1>
+                <p class="fondo card-text">
+                    The world is huge! There a countless places to go to with your
+                    adventure buddy. Scroll down to learn more
+                </p>
             </div>
         </div>
         <div class="container-fluid">
-            <br>
-            <h2 class="text-center">Select a region</h2>
-            <br>
-            
+            <br />
+            <h2 class="text-center">Select a peak</h2>
+            <br/>
+            <!--cards will populate api info-->
             <div class="card-deck">
                 <div class="card">
-                    <img src="./assets/img/dacks.jpg" class="card-img-top img-fluid" alt="...">
+                    <img src="./assets/img/katahdin2.jpg" height="250" class="card-img-top img-fluid" alt="insert pic here" />
                     <div class="card-body">
-                        <h5 class="card-title">Adirondacks</h5>
-                        <p class="card-text">Home to some of the most wild and remote terrain on the East Coast, the Adirondacks will leave your legs and heart pumping.</p>
+                        <h5 class="card-title">Mt Katahdin</h5>
+                        <p class="card-text">
+                            The knife edge and so much more.  Come visit New England's most unique peak. 
+                        </p>
                     </div>
                     <div class="card-footer">
-                        <a href="./adirondackPeaks.html" class="btn btn-primary btn-lg">Click to choose your peak!</a>
+                        <button type="submit" data-peak="katahdin" class="btn btn-primary btn-lg peakButton">
+                            Click to choose your trail!
+                        </button>
                     </div>
                 </div>
                 <div class="card">
-                    <img src="./assets/img/katahdin.jpg" class="card-img-top img-fluid" alt="...">
+                    <img src="./assets/img/troutBrook.jpg" height="250" class="card-img-top img-fluid" alt="insert pic here" />
                     <div class="card-body">
-                        <h5 class="card-title">Northern Maine</h5>
-                        <p class="card-text">This region will present you with beautiful lakes, and mountains that seem to have been transplanted from the West Coast.  Come take a look at what Maine has to offer.</p>
+                        <h5 class="card-title">Trout Brook Mtn</h5>
+                        <p class="card-text">
+                            Hiking isn't always about finding the highest peaks.  Come explore the vast low land wilderness that North Maine has to offer. 
+                        </p>
                     </div>
                     <div class="card-footer">
-                        <a href="./northernMainePeaks.html" class="btn btn-primary btn-lg">Click to choose your peak!</a>
+                        <button type="submit" data-peak="troutBrook" class="btn btn-primary btn-lg peakButton">
+                            Click to choose your trail!
+                        </button>
                     </div>
                 </div>
-                <div class="card">
-                    <img src="./assets/img/presidentials.jpg" class="card-img-top img-fluid" alt="...">
-                    <div class="card-body">
-                        <h5 class="card-title">The Presidentials</h5>
-                        <p class="card-text">This range holds the record for the largest alpine zone in our region with some of most beautiful and dramatic views.</p>
-                    </div>
-                    <div class="card-footer">
-                        <a href="./presidentialPeaks.html" class="btn btn-primary btn-lg">Click to choose your peak!</a>
-                    </div>
-                </div>
+
             </div>
         </div>
+        <br>
+        <section class="trailsList row row-cols-1 row-cols-md-4">
+            <template id="trails-template">
+                <div class="card trail-item">
+                    <img class="trail-photo img-fluid" height="auto" src="#" alt="Picture of trail">
+                    <div class="card-body">
+                        <h3 class="trail-title"></h3>
+                        <p><span class="trail-description"></span></p>
+                        <p>Mileage: <span class="mileage"></span></p>
+                        <p>Elevation gain: <span class="elevation-gain"></span></p>
+                        <button type="button" data-trailId class="btn btn-danger btn-sm add-button trailButton">
+                            Add to Bucket List!</button>
+                    </div>
+                    
+                </div>
+                </template>
+
+        </section>
 
     </main>
     <!-- Footer -->
@@ -124,9 +142,10 @@
     <!-- Footer -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
-    integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
-    crossorigin="anonymous"></script>
-    <script type="text/javascript" src="js/members.js"></script>
+        integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+        crossorigin="anonymous"></script>
+    <script type="text/javascript" src="js/peakSelection.js"></script>
+
 </body>
 
 </html>

@@ -8,9 +8,15 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
         integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
     <link rel="stylesheet" href="./stylesheets/style.css" type="text/css" />
+    <link rel="stylesheet" href="./stylesheets/email.css" type="text/css" />
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
         integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous" />
-    {{!-- <script src="server.js"></script> --}}
+    <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+        integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+        crossorigin="anonymous"></script>
+    <!-- Scripts -->
 </head>
 
 <body>
@@ -40,7 +46,7 @@
                         <a class="nav-link" href="/logout">Logout</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#contact">Contact Us</a>
+                        <a class="nav-link" id="button-contact" class="contact-button" href="#">Contact Us</a>
                     </li>
                 </ul>
             </div>
@@ -65,7 +71,8 @@
         <div class="github">
             <a target="_blank" rel="noopener" href="https://github.com/dylanbest15">Dylan Best</a>&nbsp;&#124;&nbsp;
             <a target="_blank" rel="noopener" href="https://github.com/cjlaflamme1">Chad Laflamme</a>&nbsp;&#124;&nbsp;
-            <a target="_blank" rel="noopener" href="https://github.com/BR3NDAN-L8N">Brendan Leighton</a>&nbsp;&#124;&nbsp;
+            <a target="_blank" rel="noopener" href="https://github.com/BR3NDAN-L8N">Brendan
+                Leighton</a>&nbsp;&#124;&nbsp;
             <a target="_blank" rel="noopener" href="https://github.com/ARam2142">Andres Ramirez</a>&nbsp;&#124;&nbsp;
             <a target="_blank" rel="noopener" href="https://github.com/kdunphe">Kayla Dunphe</a>&nbsp;&#124;&nbsp;
             <a target="_blank" rel="noopener" href="https://github.com/ambertrand">Alex Bertrand</a>
@@ -73,13 +80,16 @@
     </footer>
     <!-- Footer -->
 
-    <!-- Scripts -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
-        integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
-        crossorigin="anonymous"></script>
-    <!-- Scripts -->
+    <!-- Contact Us modal -->
+    <div id="contact-modal" class="modal">
+        <div class="modal-content">
+            <span class="span-close"><button class="close">&times;</button></span>
+            <textarea name="email-form" id="email-textarea" cols="30" rows="10"></textarea>
+        </div>
+    </div>
 
 </body>
+
+    <script src="./js/email.js"></script>
 
 </html>

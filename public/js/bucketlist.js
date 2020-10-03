@@ -80,7 +80,7 @@ $(function () {
         // create email list item for each buddy found
         for (let i = 0; i < result.length; i++) {
           let newBuddyItem = buddyItem.clone();
-          newBuddyItem.find("span.buddy-name").text(`${result[i].first_name} ${result[i].last_name}`);
+          newBuddyItem.find("h4.buddy-name").text(`${result[i].first_name} ${result[i].last_name}`);
           newBuddyItem.find("button.email-buddy").attr("id", result[i].email);
           newBuddyItem.find("button.email-buddy").attr("data-recipient", `${result[i].first_name} ${result[i].last_name}`);
           buddyList.append(newBuddyItem);

@@ -105,7 +105,6 @@ div.modal-content {
   padding: 2vw;
   border: 1px solid #888;
   width: 90vw;
-  background-color: hotpink;
 }
 
 span.span-close {
@@ -149,10 +148,10 @@ button.email-buddy {
   .testing-this {
     margin: 0px;
     padding: 0px;
-    background-color: blueviolet;
   }
   div.model-content {
     padding: 0px;
     margin-right: 50%;
+    margin-left: 50%;
   }
 }
